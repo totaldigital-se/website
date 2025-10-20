@@ -907,6 +907,9 @@ h6 {
 }
 
 /*Icon Block*/
+.icon {
+    width: 60px;
+}
 
 .icon-block {
     position: relative;
@@ -2651,8 +2654,8 @@ blockquote {
         display: none;
     } */
 
-    .col-15 {
-        width: 50%;
+    .col-61 {
+        width: 100%;
     }
 
     .col-5 {
@@ -2661,6 +2664,7 @@ blockquote {
 
     .col-13,
     .col-14,
+    .col-15,
     .col-2-3 {
         width: 50%;
     }
