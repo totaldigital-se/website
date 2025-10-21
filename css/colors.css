@@ -313,7 +313,7 @@ a,
 
 #banner {
     /* background: url("../images/banner-images/banner-image-orange.jpg") no-repeat center top; */
-    background: url("../images/banner-images/banner-image-green.jpg") no-repeat center top;
+    background: url("../images/banner-images/banner_gradient_wide.png") no-repeat center top;
     /* background: url("../images/banner-images/banner-image-gold.png") no-repeat center top; */
     background-size: cover;
 }
