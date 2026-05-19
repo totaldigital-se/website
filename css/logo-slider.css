@@ -1,0 +1,63 @@
+/* 1. Container can now be ANY width you want (e.g., 600px, 50%, etc.) */
+.logo-slider {
+    overflow: hidden;
+    padding: 30px 0;
+    /* background: #f9f9f9; */
+    position: relative;
+
+    /* Change this to whatever width fits your design */
+    /* width: 80%; */
+    margin: 0 auto;
+    /* Centers the slider on the page */
+
+    /* Use flex to force the main track and cloned track to sit side-by-side */
+    display: flex;
+}
+
+/* Fade-out edge gradients */
+.logo-slider::before,
+.logo-slider::after {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+/* .logo-slider::before {
+    left: 0;
+    background: linear-gradient(to right, #f9f9f9, rgba(249, 249, 249, 0));
+}
+
+.logo-slider::after {
+    right: 0;
+    background: linear-gradient(to left, #f9f9f9, rgba(249, 249, 249, 0));
+} */
+
+/* 2. The Track: Flexbox prevents any shrinking or overlapping */
+.logo-track {
+    display: flex;
+    align-items: center;
+    /* Prevent the track from shrinking to fit the parent container */
+    flex-shrink: 0;
+}
+
+/* 3. Your Logos: Enlarge them safely here */
+.logo-track img {
+    /* height: 80px; */
+    height: 160px;
+    /* Enlarge safely; the track will adapt */
+    width: auto;
+    /* Maintains aspect ratio */
+    margin: 0 50px;
+    /* Generous spacing between logos */
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
