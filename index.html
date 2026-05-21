@@ -31,6 +31,12 @@
     <!-- Logo Slider CSS -->
     <link href="css/logo-slider.css" rel="stylesheet" type="text/css">
 
+    <!-- Feature Card CSS -->
+    <link href="css/feature-card.css" rel="stylesheet" type="text/css">
+
+    <!-- Service Card CSS -->
+    <link href="css/service-card.css" rel="stylesheet" type="text/css">
+
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -49,7 +55,7 @@
 
     <div id="wrapper">
 
-        <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <header id="home" class="scrollto clearfix" data-enllax-ratio=".5">
             <div id="header" class="nav-collapse">
                 <div class="row clearfix">
                     <div class="col-1">
@@ -92,13 +98,13 @@
                         <nav id="nav-main">
                             <ul>
                                 <li>
-                                    <a href="#banner">Home</a>
+                                    <a href="#home">Home</a>
                                 </li>
                                 <li>
                                     <a href="#businessareas">Affärsområden</a>
                                 </li>
                                 <li>
-                                    <a href="#projects">Projekt</a>
+                                    <a href="#showcases">Showcases</a>
                                 </li>
                                 <li>
                                     <a href="#services">Tjänster</a>
@@ -291,107 +297,131 @@
             </section>
             <!--End of Introduction-->
 
-            <section id="projects" class="row scrollto text-center clearfix" data-featherlight-content
+            <section id="showcases" class="row scrollto text-center clearfix" data-featherlight-content
                 data-featherlight-filter="a">
 
                 <div class="section-heading">
-                    <h3>PROJEKT</h3>
+                    <h3>SHOWCASES</h3>
                     <h2 class="section-title">Vi skapar värde för våra kunder</h2>
                 </div>
 
-
-
-
                 <div class="row no-padding-bottom clearfix">
+                    <a href="railway-safety.html" class="card-link">
+                        <div class="col-1 feature-card showcase text-left wow fadeInUp" data-wow-delay="0.1s">
+                            <!-- Left 20% Image Section -->
+                            <div class="card-image-wrapper">
+                                <img src="images/showcase-images/crm3000.jpg" alt="Feature thumbnail">
+                            </div>
 
-                    <div class=" col-15">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <img src="images/banner-images/td_asset_care.png" />
+                            <!-- Right 80% Content Section -->
+                            <div class="card-content">
+                                <h4>Prediktiv järnvägssäkerhet med satellitdata och AI</h4>
+                                <p>
+                                    Ett satellit- och AI-baserat beslutsstödsystem för att prognosticera rälsens
+                                    temperatur
+                                    och
+                                    risken för spårförskjutning
+                                    24–48 timmar i förväg. Genom att kombinera multisensor-satellitdata, väderprognoser
+                                    och
+                                    infrastrukturinformation
+                                    möjliggörs proaktivt underhåll och säkrare järnvägsdrift.
+                                </p>
+                            </div>
+
+                            <!-- New text-based Arrow Icon -->
+                            <div class="card-arrow">&gt;</div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="row no-padding-bottom clearfix">
+                    <a href="sar-processing.html" class="card-link">
+                        <div class="col-1 feature-card showcase text-left wow fadeInUp" data-wow-delay="0.1s">
+                            <!-- Left 20% Image Section -->
+                            <div class="card-image-wrapper">
+                                <img src="images/showcase-images/sar.png" alt="Feature thumbnail">
+                            </div>
 
-                    <div class="col-61 text-left wow fadeInUp" data-wow-delay="0.1s">
-                        <h4>Prediktiv järnvägssäkerhet med satellitdata och AI</h4>
-                        <p>
-                            Ett satellit- och AI-baserat beslutsstödsystem för att prognosticera rälsens temperatur och
-                            risken för spårförskjutning
-                            24–48 timmar i förväg. Genom att kombinera multisensor-satellitdata, väderprognoser och
-                            infrastrukturinformation
-                            möjliggörs proaktivt underhåll och säkrare järnvägsdrift.
-                        </p>
-                    </div>
+                            <!-- Right 80% Content Section -->
+                            <div class="card-content">
+                                <h4>Hög- och medelupplöst SAR-bearbetning för skalbar övervakning</h4>
+                                <p>
+                                    Vi erbjuder bearbetning av både hög- och medelupplösta SAR-data för att ta fram
+                                    detaljerad
+                                    information om markrörelser
+                                    på både lokal och regional skala. Genom att tillämpa datafusionstekniker på
+                                    medelupplösta
+                                    SAR möjliggörs även en
+                                    enhetlig övervakning av stora områden som stödjer analys av infrastruktur och
+                                    beslutsfattande.
+                                </p>
+                            </div>
+
+                            <!-- New text-based Arrow Icon -->
+                            <div class="card-arrow">&gt;</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row no-padding-bottom clearfix">
+                    <a href="leak-detection.html" class="card-link">
+                        <div class="col-1 feature-card showcase text-left wow fadeInUp" data-wow-delay="0.1s">
+                            <!-- Left 20% Image Section -->
+                            <div class="card-image-wrapper">
+                                <img src="images/showcase-images/waterleak.jpg" alt="Feature thumbnail">
+                            </div>
+
+                            <!-- Right 80% Content Section -->
+                            <div class="card-content">
+                                <h4>AI-baserad läckagedetektering i vatteninfrastruktur</h4>
+                                <p>
+                                    Vi kombinerar multisensor-satellitdata och AI för att identifiera och lokalisera
+                                    läckor
+                                    i
+                                    vattenledningsnät genom att
+                                    analysera subtila förändringar i miljön. Genom att möjliggöra kontinuerlig
+                                    övervakning
+                                    över
+                                    stora områden bidrar
+                                    lösningen till minskade vattenförluster, lägre driftkostnader och en mer långsiktigt
+                                    hållbar
+                                    vattenförsörjning.
+                                </p>
+                            </div>
+
+                            <!-- New text-based Arrow Icon -->
+                            <div class="card-arrow">&gt;</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row no-padding-bottom clearfix">
+                    <a href="raildamage-analyses.html" class="card-link">
+                        <div class="col-1 feature-card showcase text-left wow fadeInUp" data-wow-delay="0.1s">
+                            <!-- Left 20% Image Section -->
+                            <div class="card-image-wrapper">
+                                <img src="images/showcase-images/raildamage.jpeg" alt="Feature thumbnail">
+                            </div>
+
+                            <!-- Right 80% Content Section -->
+                            <div class="card-content">
+                                <h4>AI-baserad analys av rälsskador i bilddata</h4>
+                                <p>
+                                    Vi utvecklar metoder för att automatiskt upptäcka skador på räls med hjälp av
+                                    djupinlärning
+                                    och bilddata från
+                                    järnvägsinspektioner. Genom att analysera visuella mönster i spårbilder kan systemet
+                                    identifiera defekter i ett tidigt
+                                    skede och stödja mer effektivt underhåll och ökad driftsäkerhet.
+                                </p>
+                            </div>
+
+                            <!-- New text-based Arrow Icon -->
+                            <div class="card-arrow">&gt;</div>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="row no-padding-bottom clearfix">
-
-                    <div class=" col-15">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <img src="images/banner-images/td_asset_care.png" />
-                        </div>
-                    </div>
-
-                    <div class="col-61 text-left wow fadeInUp" data-wow-delay="0.1s">
-                        <h4>Hög- och medelupplöst SAR-bearbetning för skalbar övervakning</h4>
-                        <p>
-                            Vi erbjuder bearbetning av både hög- och medelupplösta SAR-data för att ta fram detaljerad
-                            information om markrörelser
-                            på både lokal och regional skala. Genom att tillämpa datafusionstekniker på medelupplösta
-                            SAR möjliggörs även en
-                            enhetlig övervakning av stora områden som stödjer analys av infrastruktur och
-                            beslutsfattande.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row no-padding-bottom clearfix">
-
-                    <div class=" col-15">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <img src="images/banner-images/td_asset_care.png" />
-                        </div>
-                    </div>
-
-                    <div class="col-61 text-left wow fadeInUp" data-wow-delay="0.1s">
-                        <h4>AI-baserad läckagedetektering i vatteninfrastruktur</h4>
-                        <p>
-                            Vi kombinerar multisensor-satellitdata och AI för att identifiera och lokalisera läckor
-                            i
-                            vattenledningsnät genom att
-                            analysera subtila förändringar i miljön. Genom att möjliggöra kontinuerlig övervakning
-                            över
-                            stora områden bidrar
-                            lösningen till minskade vattenförluster, lägre driftkostnader och en mer långsiktigt
-                            hållbar
-                            vattenförsörjning.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row no-padding-bottom clearfix">
-
-                    <div class=" col-15">
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <img src="images/banner-images/td_asset_care.png" />
-                        </div>
-                    </div>
-
-                    <div class="col-61 text-left wow fadeInUp" data-wow-delay="0.1s">
-                        <h4>AI-baserad analys av rälsskador i bilddata</h4>
-                        <p>
-                            Vi utvecklar metoder för att automatiskt upptäcka skador på räls med hjälp av
-                            djupinlärning
-                            och bilddata från
-                            järnvägsinspektioner. Genom att analysera visuella mönster i spårbilder kan systemet
-                            identifiera defekter i ett tidigt
-                            skede och stödja mer effektivt underhåll och ökad driftsäkerhet.
-                        </p>
-                    </div>
-                </div>
             </section>
 
-
-            <!--Gallery-->
-            <aside id="services" class="row text-center scrollto clearfix" data-featherlight-content
+            <section id="services" class="row text-center scrollto clearfix" data-featherlight-content
                 data-featherlight-filter="a">
 
                 <div class="section-heading">
@@ -399,90 +429,113 @@
                     <h2 class="section-title">Hur kan vi hjälpa dig</h2>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="it-support" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Implementation av IT-stöd för tillgångsförvaltning</h4>
-                        Vi erbjuder expertis inom alla delar av systemen IBM Maximo och Esri ArcGIS för effektiv
-                        tillgångsförvaltning.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card it-support">
+                        <div class="overlay">
+                            <span>
+                                <h4>Implementation av IT-stöd för tillgångsförvaltning</h4>
+                                Vi erbjuder expertis inom alla delar av systemen IBM Maximo och Esri ArcGIS för
+                                effektiv
+                                tillgångsförvaltning.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="development" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Applikationsutveckling och konfiguration</h4>
-                        Vi hjälper er att säkerställa användandet av IBM Maximo och Esri ArcGIS tillsammans med
-                        integrerade system för bästa resultat.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card development">
+                        <div class="overlay">
+                            <span>
+                                <h4>Applikationsutveckling och konfiguration</h4>
+                                Vi hjälper er att säkerställa användandet av IBM Maximo och Esri ArcGIS tillsammans med
+                                integrerade system för bästa resultat.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="licenses" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Licenser och drift</h4>
-                        Vi tar hand om alla licensprocesser och förenklar hanteringen av licenser för både IBM Maximo
-                        och Esri ArcGIS.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card licenses">
+                        <div class="overlay">
+                            <span>
+                                <h4>Licenser och drift</h4>
+                                Vi tar hand om alla licensprocesser och förenklar hanteringen av licenser för både IBM
+                                Maximo
+                                och Esri ArcGIS.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="sensor" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Sensorteknik</h4>
-                        Med vår kunskap och erfarenhet inom sensorteknik hjälper vi er att utveckla och förvalta er
-                        annläggning på ett
-                        effektivare sätt.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card sensor">
+                        <div class="overlay">
+                            <span>
+                                <h4>Sensorteknik</h4>
+                                Med vår kunskap och erfarenhet inom sensorteknik hjälper vi er att utveckla och förvalta
+                                er
+                                annläggning på ett
+                                effektivare sätt.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="projectmanagement" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Projektledning och rådgivning inom anläggningsinformation, digitalisering och AI</h4>
-                        Vi stöttar er i olika typer av projekt, från förändringsprojekt till migreringsprojekt inom
-                        tillgångsförvaltning och asset management.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card projectmanagement">
+                        <div class="overlay">
+                            <span>
+                                <h4>Projektledning och rådgivning inom anläggningsinformation, digitalisering och AI
+                                </h4>
+                                Vi stöttar er i olika typer av projekt, från förändringsprojekt till migreringsprojekt
+                                inom
+                                tillgångsförvaltning och asset management.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="geo-development" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Utveckling och analys inom geodataområdet</h4>
-                        Vi erbjuder omfattande tjänster inom utveckling och analys av geodata för att förbättra era
-                        arbetsflöden och beslutsprocesser.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card geo-development">
+                        <div class="overlay">
+                            <span>
+                                <h4>Utveckling och analys inom geodataområdet</h4>
+                                Vi erbjuder omfattande tjänster inom utveckling och analys av geodata för att förbättra
+                                era
+                                arbetsflöden och beslutsprocesser.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="consultancy" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Tjänstebaserad och produktifierade leveranser</h4>
-                        Vi erbjuder teknisk expertis för att övervaka och hantera hälsa och prestanda inom både IBM
-                        Maximo och Esri ArcGIS.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card consultancy">
+                        <div class="overlay">
+                            <span>
+                                <h4>Tjänstebaserad och produktifierade leveranser</h4>
+                                Vi erbjuder teknisk expertis för att övervaka och hantera hälsa och prestanda inom både
+                                IBM
+                                Maximo och Esri ArcGIS.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div id="training" class="col-4 backgroundimage"></div>
-                    <div class="col-4 backgroundimage-overlay"></div>
-                    <div class="col-4 text-on-image">
-                        <h4>Utbildning</h4>
-                        Vi erbjuder kundanpassad utbildning inom både IBM Maximo och Esri ArcGIS för att säkerställa att
-                        ni får ut det mesta av
-                        era system.
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-card training">
+                        <div class="overlay">
+                            <span>
+                                <h4>Utbildning</h4>
+                                Vi erbjuder kundanpassad utbildning inom både IBM Maximo och Esri ArcGIS för att
+                                säkerställa att
+                                ni får ut det mesta av
+                                era system.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-            </aside>
-            <!--End of Gallery-->
+            </section>
 
 
             <!--Content Section-->
@@ -543,7 +596,7 @@
             <!--End of Content Section-->
 
             <!-- Testimonials-->
-            <!-- <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
+            <aside id="testimonials" class="scrollto text-center" data-enllax-ratio=".2">
 
                 <div class="row clearfix">
 
@@ -578,7 +631,7 @@
 
                 </div>
 
-            </aside> -->
+            </aside>
             <!--End of Testimonials -->
 
             <!--Clients-->
@@ -601,26 +654,6 @@
                             för våra kunder.</p>
                     </div>
 
-                    <!-- <div class="col-2-3">
-
-                        <a href="https://www.ibm.com/products/maximo/" class="col-3" target="_blank">
-                            <img src="images/company-images/ibm.png" alt="Company" />
-                        </a>
-                        <a href="https://www.esri.com/" class="col-3" target="_blank">
-                            <img src="images/company-images/esri.png" alt="Company" />
-                        </a>
-                        <a href="https://www.maxanv.se/" class="col-3" target="_blank">
-                            <img src="images/company-images/maxanv.png" alt="Company" />
-                        </a>
-                        <a href="https://www.naviam.io/" class="col-3" target="_blank">
-                            <img src="images/company-images/naviam.png" alt="Company" />
-                        </a>
-                        <a href="https://www.pedab.se/" class="col-3" target="_blank">
-                            <img src="images/company-images/pedab.png" alt="Company" />
-                        </a>
-
-                    </div> -->
-
                     <div class="col-1 logo-slider" id="logoSlider">
                         <div class="logo-track" id="logoTrack">
                             <!-- Replace these placeholder URLs with your actual partner logo image paths -->
@@ -630,6 +663,8 @@
                                     alt="Esri"></a>
                             <a href="https://www.nvidia.com/sv-se/" target="_blank"><img
                                     src="images/company-images/nvidia.png" alt="Nvidia"></a>
+                            <a href="https://www.rymdstyrelsen.se/" target="_blank"><img
+                                    src="images/company-images/rymdstyrelsen.png" alt="Rymdstyrelsen"></a>
                             <a href="https://www.maxanv.se/" target="_blank"><img src="images/company-images/maxanv.png"
                                     alt="Maximo Användarförening"></a>
                             <a href="https://www.naviam.io/" target="_blank"><img src="images/company-images/naviam.png"
@@ -643,7 +678,6 @@
             </section>
             <!--End of Clients-->
 
-            <!--Pricing Tables-->
             <section id="products" class="secondary-color text-center scrollto clearfix ">
                 <div class="row clearfix">
 
@@ -652,7 +686,94 @@
                         <h2 id="pricing-heading" class="section-title">Vi har rätt lösning till dig</h2>
                     </div>
 
-                    <!--Pricing Block-->
+                    <div class="col-2 wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="td_asset_care.html" class="card-link">
+                            <div class="feature-card product">
+                                <div>
+                                    <h1>TD Asset Care</h1>
+                                    <p class="pricing-sub">För alla era EAM behov</p>
+                                    <!-- <div class="pricing product-image" id="td_asset_care_banner">
+                                    <h3></h3>
+                                </div> -->
+                                    <div class="product-image-wrapper">
+                                        <img src="images/banner-images/td_asset_care.png" alt="Feature thumbnail">
+                                    </div>
+                                    <div class="pricing-content">
+                                        <p>
+                                            TD Asset Care är en komplett 360°-lösning för alla era EAM-behov. Det är en
+                                            komplett
+                                            lösning för att göra förvaltning
+                                            och underhåll av era fysiska tillgångar enkel och effektiv. TD Asset Care
+                                            innehåller
+                                            branschspecifika funktioner som
+                                            förbättrar och lägger till standardunderhållsfunktionalitet. TD Asset Care
+                                            kan
+                                            driftas
+                                            on-prem i era serverhallar,
+                                            hybrid eller i molnet, allt beroende på vad ni har för behov.
+                                        </p>
+                                    </div>
+                                    <a href="mailto:info@totaldigital.se?subject=Boka ett möte om TD Asset Care"
+                                        class="button">BOKA ETT
+                                        MÖTE</a>
+                                </div>
+                                <div class="card-arrow">&gt;</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-2 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="td_test.html" class="card-link">
+                            <div class="feature-card product">
+                                <div>
+                                    <h1>TD Test</h1>
+                                    <p class="pricing-sub">Kvalitetssäkra ditt IBM Maximo</p>
+                                    <!-- <div class="pricing" id="td_test_banner">
+                                    <h3></h3>
+                                </div> -->
+                                    <div class="product-image-wrapper">
+                                        <img src="images/banner-images/td_test.png" alt="Feature thumbnail">
+                                    </div>
+                                    <div class="pricing-content">
+                                        <p>
+                                            TD Test är verktyget för automattester som fungerar lika bra för IBM Maximo
+                                            7.x
+                                            som
+                                            för
+                                            nyaste IBM Maximo Application
+                                            Suite.
+
+                                            Vill ni vara säkra på att era anpassningar fungerar lika bra i senaste
+                                            versionen
+                                            av
+                                            IBM
+                                            Maximo som i er föregående
+                                            version är TD Test verktyget för Er!
+
+                                            TD Test är till exempel perfekt för att verifiera en lyckad uppgradering
+                                            till
+                                            MAS!
+                                        </p>
+                                    </div>
+                                    <a href="mailto:info@totaldigital.se?subject=Boka ett möte om TD Test"
+                                        class="button">BOKA
+                                        ETT MÖTE</a>
+                                </div>
+                                <div class="card-arrow">&gt;</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="products" class="secondary-color text-center scrollto clearfix ">
+                <div class="row clearfix">
+
+                    <div class="section-heading">
+                        <h3>PRODUKTER</h3>
+                        <h2 id="pricing-heading" class="section-title">Vi har rätt lösning till dig</h2>
+                    </div>
+
                     <div class="pricing-block col-13 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="pricing-block-content">
                             <h1>TD Asset Care</h1>
@@ -662,9 +783,11 @@
                             </div>
                             <div class="pricing-content">
                                 <p>
-                                    TD Asset Care är en komplett 360°-lösning för alla era EAM-behov. Det är en komplett
+                                    TD Asset Care är en komplett 360°-lösning för alla era EAM-behov. Det är en
+                                    komplett
                                     lösning för att göra förvaltning
-                                    och underhåll av era fysiska tillgångar enkel och effektiv. TD Asset Care innehåller
+                                    och underhåll av era fysiska tillgångar enkel och effektiv. TD Asset Care
+                                    innehåller
                                     branschspecifika funktioner som
                                     förbättrar och lägger till standardunderhållsfunktionalitet. TD Asset Care kan
                                     driftas
@@ -677,9 +800,7 @@
                                 MÖTE</a>
                         </div>
                     </div>
-                    <!--End Pricing Block-->
 
-                    <!--Pricing Block-->
                     <div class="pricing-block featured col-13 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="pricing-block-content">
                             <h1>TD Test</h1>
@@ -706,11 +827,9 @@
                                 ETT MÖTE</a>
                         </div>
                     </div>
-                    <!--End Pricing Block-->
 
                 </div>
-            </section>
-            <!--End of Pricing Tables-->
+            </section> -->
 
         </main>
         <!--End Main Content Area-->

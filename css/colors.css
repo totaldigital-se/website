@@ -156,7 +156,7 @@ a,
 
 /* Border Color */
 
-#banner .section-heading:before,
+#home .section-heading:before,
 .testimonial.classic footer:before {
     background: var(--primary);
     /*#d2b356;*/
@@ -310,7 +310,7 @@ a,
 
 /* Banner Background and Text Colors */
 
-#banner {
+#home {
     /* background: url("../images/banner-images/banner-image-orange.jpg") no-repeat center top; */
     background: url("../images/banner-images/banner_gradient_wide.png") no-repeat center top;
     /* background: url("../images/banner-images/banner-image-gold.png") no-repeat center top; */
@@ -351,7 +351,7 @@ body {
 
 /* Banner Typography */
 
-#banner h1 {
+#home h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 62px;
     line-height: 60px;
@@ -360,7 +360,7 @@ body {
     /* color: var(--header-text) */
 }
 
-#banner h2 {
+#home h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
@@ -380,7 +380,7 @@ body {
 
 .section-subtitle {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--section-subtitle);
 }
@@ -504,7 +504,7 @@ input[type="submit"]:hover {
 
 /* Button Text */
 
-#banner .button {
+#home .button {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 16px;
     color: var(--banner-text);
@@ -514,7 +514,7 @@ input[type="submit"]:hover {
 
 /* Button Color */
 
-#banner .button {
+#home .button {
     border-color: var(--banner-text);
     /* border-color: var(--header-text); */
 }
@@ -522,7 +522,7 @@ input[type="submit"]:hover {
 
 /* Button Hover Color */
 
-#banner .button:hover {
+#home .button:hover {
     color: var(--primary);
     /*#d2b356;*/
     border-color: var(--primary);

@@ -1,0 +1,124 @@
+/* The main card container */
+.feature-card {
+    display: flex;
+    /* width: 500px; */
+    /* height: 180px; */
+    background-color: #333;
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Clips EVERYTHING strictly to the 16px radius */
+    position: relative;
+    /* Required to anchor our absolute image */
+    /* box-shadow: 0 4px 6px rgba(68, 68, 68, 0.15); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #555;
+}
+
+/* Updated hover state for a perfectly uniform, rounded shadow glow */
+.feature-card:hover {
+    /* 
+       The 4 values mean: X-offset (0), Y-offset (15px), Blur (30px), and Spread (-3px).
+       The negative spread pulls the shadow inward slightly, forcing it to round out 
+       perfectly even on the sides with dark images.
+    */
+    /* box-shadow: 0 15px 30px -3px rgba(68, 68, 68, 0.6); */
+    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+    /* Optional: lifts the card slightly to emphasize the shadow */
+}
+
+.card-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Image zoom on hover */
+.feature-card:hover .card-image-wrapper img {
+    transform: scale(1.06);
+}
+
+.product-image-wrapper {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .product-image-wrapper img {
+    transform: scale(1.06);
+}
+
+/* Right side container for your text/content */
+.card-content {
+    width: 70%;
+    margin-left: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 45px;
+}
+
+/* ">" Arrow styling and positioning */
+.card-arrow {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+    user-select: none;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Moves the ">" arrow slightly to the right on hover */
+.feature-card:hover .card-arrow {
+    transform: translateX(6px);
+}
+
+/* Removes the default underline and text coloring from the link wrap */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    /* Forces text to keep the colors you already defined */
+    display: inline-block;
+    /* Keeps the link wrapping neatly around the card */
+}
+
+.showcase {
+    min-height: 200px;
+}
+
+.product {
+    padding: 10px;
+    width: 350px;
+    margin: 0 auto;
+    min-height: 765px;
+}

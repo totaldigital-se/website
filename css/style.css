@@ -274,6 +274,7 @@ section {
 
 .col-2 {
     width: 50%;
+    /* border: 1px solid darkorchid; */
 }
 
 .col-3 {
@@ -282,10 +283,10 @@ section {
 
 .col-4 {
     /* position: relative; */
-    width: 49%;
+    width: 45%;
     /* width: 33%; */
     padding: 0px;
-    margin: 2px;
+    margin: 0px;
     /* padding-top: 100%; */
     /* 1:1 Aspect Ratio */
     /* position: relative; */
@@ -390,7 +391,7 @@ section {
     display: inline-block;
 }
 
-#banner #logo h1 {
+#home #logo h1 {
     font-size: 28px;
     margin-right: 10px;
     font-weight: 900;
@@ -848,6 +849,23 @@ h6 {
     text-align: right;
 }
 
+/* Content Alignment */
+
+.content-left {
+    display: flex;
+    justify-content: left;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.content-right {
+    display: flex;
+    justify-content: right;
+}
+
 /* Section Headings */
 
 .section-heading {
@@ -871,7 +889,7 @@ h6 {
 /* 4. Banner */
 /*------------------------------------------------------------------------------------------*/
 
-#banner {
+#home {
     background-size: cover;
 }
 
@@ -880,11 +898,15 @@ h6 {
     padding-bottom: 100px;
 }
 
-#banner h1 {
+.banner-spacer {
+    height: 30px;
+}
+
+#home h1 {
     padding-top: 5%;
 }
 
-#banner .section-heading:before {
+#home .section-heading:before {
     content: "";
     display: block;
     width: 30px;
@@ -1073,8 +1095,13 @@ blockquote {
 /* --------- 6.4 Gallery ---------- */
 
 .backgroundimage {
-    position: absolute;
+    /* position: absolute; */
+    width: 100%;
+    height: 180px;
     z-index: 0;
+    border-radius: 16px;
+    /* border: 2px solid #555; */
+    border: 1px solid white;
 }
 
 /* .backgroundimage-overlay {
@@ -1093,45 +1120,13 @@ blockquote {
     flex-direction: column;
     color: var(--section-subtitle);
     z-index: 2;
-    border: 8px solid;
+    /* border: 8px solid;
     border-color: var(--primary_0);
-    transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s; */
 }
 
 .text-on-image:hover {
     border-color: var(--primary_100);
-}
-
-#it-support {
-    background-image: url("../images/gallery-images/it-support.jpg");
-}
-
-#development {
-    background-image: url("../images/gallery-images/app-development.jpg");
-}
-
-#sensor {
-    background-image: url("../images/gallery-images/sensor.jpg");
-}
-
-#licenses {
-    background-image: url("../images/gallery-images/licenses.jpg");
-}
-
-#projectmanagement {
-    background-image: url("../images/gallery-images/project-management.jpg");
-}
-
-#geo-development {
-    background-image: url("../images/gallery-images/geo-development.png");
-}
-
-#consultancy {
-    background-image: url("../images/gallery-images/consultancy.jpg");
-}
-
-#training {
-    background-image: url("../images/gallery-images/training-course.jpg");
 }
 
 /* #gallery img {
@@ -2398,6 +2393,10 @@ blockquote {
         padding: 0;
     }
 
+    #home h1 {
+        font-size: 58px !important;
+    }
+
     /* .page-border,
     #scrollUp,
     #scrollUp:before {
@@ -2431,6 +2430,10 @@ blockquote {
     .row {
         width: 100%;
     }
+
+    /* .col-2 {
+        width: 90%;
+    } */
 
     .col-5 {
         width: 0%;
@@ -2518,10 +2521,6 @@ blockquote {
         font-size: 38px;
     }
 
-    #banner h1 {
-        font-size: 48px;
-    }
-
     /* Hide Elements */
     a#scrollUp {
         display: none !important;
@@ -2551,10 +2550,10 @@ blockquote {
 
     .col-1,
 
-    /* .col-2, */
+    .col-2,
 
     /* .col3, */
-    .col-4,
+    /* .col-4, */
 
     /* .col-5, */
 
@@ -2569,15 +2568,19 @@ blockquote {
         width: 100%;
     }
 
-    .col-2,
+    /* .col-2, */
     .col-3,
-    /* .col-4, */
+    /* .col-, */
     .col-6,
     .col-8,
     .col-10,
     .col-12 {
         width: 50%;
     }
+
+    /* .col-2 {
+        width: 90%;
+    } */
 
     .col-5 {
         width: 0%;
