@@ -85,35 +85,35 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .it-support {
-    background-image: url("../images/gallery-images/it-support.jpg");
+    background-image: url("../images/gallery-images/it-support.webp");
 }
 
 .development {
-    background-image: url("../images/gallery-images/app-development.jpg");
+    background-image: url("../images/gallery-images/app-development.webp");
 }
 
 .sensor {
-    background-image: url("../images/gallery-images/sensor.jpg");
+    background-image: url("../images/gallery-images/sensor.webp");
 }
 
 .licenses {
-    background-image: url("../images/gallery-images/licenses.jpg");
+    background-image: url("../images/gallery-images/licenses.webp");
 }
 
 .projectmanagement {
-    background-image: url("../images/gallery-images/project-management.jpg");
+    background-image: url("../images/gallery-images/project-management.webp");
 }
 
 .geo-development {
-    background-image: url("../images/gallery-images/geo-development.png");
+    background-image: url("../images/gallery-images/geo-development.webp");
 }
 
 .consultancy {
-    background-image: url("../images/gallery-images/consultancy.jpg");
+    background-image: url("../images/gallery-images/consultancy.webp");
 }
 
 .training {
-    background-image: url("../images/gallery-images/training-course.jpg");
+    background-image: url("../images/gallery-images/training-course.webp");
 }
 
 .railway-safety {
