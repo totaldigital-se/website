@@ -1659,12 +1659,12 @@ blockquote {
 }
 
 #td_asset_care_banner {
-    background: url("../images/banner-images/td_asset_care.png") no-repeat center top;
+    background: url("../images/banner-images/td_asset_care.webp") no-repeat center top;
     background-size: cover;
 }
 
 #td_test_banner {
-    background: url("../images/banner-images/td_test.png") no-repeat center top;
+    background: url("../images/banner-images/td_test.webp") no-repeat center top;
     background-size: cover;
 }
 

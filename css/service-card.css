@@ -133,11 +133,11 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .td-asset-care {
-    background-image: url("../images/banner-images/td_asset_care.png");
+    background-image: url("../images/banner-images/td_asset_care.webp");
 }
 
 .td-test {
-    background-image: url("../images/banner-images/td_test.png");
+    background-image: url("../images/banner-images/td_test.webp");
 }
 
 @media (max-width: 480px) {
