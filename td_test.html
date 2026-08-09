@@ -345,56 +345,60 @@
                         <h2 id="pricing-heading" class="section-title">TD Test vs. Webbläsarbaserade tester</h2>
                     </div>
 
-                    <div class="tdt-compare">
-                        <div class="tdt-compare-row tdt-compare-head">
-                            <div class="tdt-crit">Funktioner</div>
-                            <div class="tdt-col">Webbaserade</div>
-                            <div class="tdt-col">TD Test</div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Dynamisk anpassning av test efter gränssnittsförändringar i Maximo</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Klarar att köra samma test mot olika Maximo-versioner utan omskrivning
-                                av test</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Inbyggt stöd för test av Maximo-integrationer</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Inbyggt stöd för test av Maximos affärslogik (backend)</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Kan köra tester schemalagt utan krav på automatiseringsmotor (t.ex.
-                                Jenkins)</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Återrapportering av test med utförlig körningsinformation (t.ex. för
-                                felsökning)</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Tester som inte påverkar systemet/databasen</div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                        </div>
-                        <div class="tdt-compare-row">
-                            <div class="tdt-crit">Test av olika webbläsare och webbläsarversioner</div>
-                            <div class="tdt-col"><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></div>
-                            <div class="tdt-col"><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></div>
-                        </div>
-                    </div>
+                    <table class="tdt-compare" aria-labelledby="pricing-heading">
+                        <thead>
+                            <tr>
+                                <th scope="col">Funktioner</th>
+                                <th scope="col">Webbaserade</th>
+                                <th scope="col">TD Test</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Dynamisk anpassning av test efter gränssnittsförändringar i Maximo</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Klarar att köra samma test mot olika Maximo-versioner utan omskrivning
+                                    av test</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Inbyggt stöd för test av Maximo-integrationer</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Inbyggt stöd för test av Maximos affärslogik (backend)</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Kan köra tester schemalagt utan krav på automatiseringsmotor (t.ex.
+                                    Jenkins)</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Återrapportering av test med utförlig körningsinformation (t.ex. för
+                                    felsökning)</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tester som inte påverkar systemet/databasen</th>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Test av olika webbläsare och webbläsarversioner</th>
+                                <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
+                                <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
             </section>
