@@ -38,10 +38,9 @@
 }
 
 /* Content lists (capabilities / reporting / execution) */
+/* padding/margin already zeroed by the global reset in style.css */
 .tdt-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
     text-align: left;
 }
 
@@ -77,9 +76,8 @@
 }
 
 /* Screenshot slots */
-.tdt-shot img {
+.tdt-shot {
     width: 100%;
-    height: auto;
     max-height: 420px;
     object-fit: cover;
     display: block;
@@ -88,11 +86,8 @@
     box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
 }
 
-/* Feature grid (5 icons) */
-.tdt-feature {
-    text-align: center;
-}
-
+/* Feature grid (5 icons) — centering is inherited from the section's
+   .text-center; only the body copy opts back out */
 .tdt-feature .tdt-icon {
     font-size: 42px;
     color: var(--primary);
