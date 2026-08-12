@@ -156,6 +156,9 @@
                             <div class="section-heading">
                                 <h2 class="section-title">Kvalitetssäkra ditt IBM Maximo</h2>
                             </div>
+                        </div>
+
+                        <div class="col-1">
                             <p>
                                 TD Test låter er testa ert IBM Maximo automatiskt &ndash; istället för att någon sitter
                                 och klickar igenom samma kontroller manuellt varje gång något ändras. Ni beskriver en
@@ -184,6 +187,9 @@
                                 Vill ni se hur det ser ut i praktiken? Hör av er för en demonstration &ndash; eller läs
                                 vidare för detaljerna.
                             </p>
+                        </div>
+
+                        <div class="col-1 text-center">
                             <a href="#kontakt" class="button">KONTAKTA OSS</a>
                         </div>
 
@@ -200,16 +206,16 @@
                         <h3>MÖJLIGHETER</h3>
                         <h2 class="section-title">Vad kan TD Test?</h2>
                         <p class="section-subtitle">"Testar Maximo med hjälp av Maximo." <br>TD Test arbetar inifrån
-                            Maximo och når därför både det användarna ser och logiken bakom.</p>
+                            Maximo och når därför både gränssnittet och affärslogiken m.m.</p>
                     </div>
 
                     <!-- Testar Maximo med hjälp av Maximo -->
                     <div class="col-1 tdt-lead">
                         <ul class="tdt-list">
                             <li><strong>Maximos gränssnitt</strong> testas precis som en användare skulle arbeta i det
-                                &ndash; men utan att någon webbläsare behöver installeras eller startas.</li>
-                            <li><strong>Logiken bakom skärmen</strong> kan testas direkt, t.ex. att en arbetsorder, ett
-                                förebyggande underhåll eller ett förrådsuttag beter sig som det ska.</li>
+                                &ndash; men utan att någon webbläsare är inblandad.</li>
+                            <li><strong>Maximos affärslogik</strong> kan testas direkt, t.ex. arbetsorder, förebyggande
+                                underhåll och förråd.</li>
                             <li><strong>Tydlig rapport</strong> efter varje körning, och <strong>historik</strong> över
                                 tidigare körningar.</li>
                             <li><strong>Testdata sköter sig själv.</strong> Databasen lämnas opåverkad efter testet, så
@@ -221,7 +227,7 @@
                                     <li>Skärmbilder från varje steg i testet.</li>
                                     <li>Utdrag ur loggarna från exakt den tidpunkt då felet uppstod.</li>
                                     <li>Hur mycket loggdetaljer som samlas in kan styras per test, utan att era vanliga
-                                        inställningar i Maximo ändras.</li>
+                                        inställningar i Maximo påverkas.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -231,15 +237,14 @@
                     <div class="tdt-pair">
                         <div class="col-2">
                             <h4>Olika typer av tester</h4>
-                            <p>Med TD Test kan ni täcka in de delar av Maximo som är viktigast för verksamheten
+                            <p>Med TD Test kan ni testa in de delar av Maximo som är viktigast för verksamheten
                                 &ndash; från det användarna klickar på till det som händer i bakgrunden:</p>
                             <ul class="tdt-list">
                                 <li>Maximos användargränssnitt i webben</li>
-                                <li>Reglerna bakom skärmen, t.ex. hur en arbetsorder får ändras</li>
-                                <li>Informationsutbyte med andra system (integrationer)</li>
+                                <li>Maximos affärslogik, t.ex. reglerna för hur en arbetsorder får ändras</li>
+                                <li>Integrationer med andra system</li>
                                 <li>Era egna anpassningar av Maximo</li>
-                                <li>Inställningar och konfigurering</li>
-                                <li>Hela arbetsflöden, så som ni faktiskt arbetar i Maximo</li>
+                                <li>Hela verksamhetsprocesser, så som ni faktiskt arbetar i Maximo</li>
                             </ul>
                         </div>
 
@@ -254,15 +259,15 @@
                     <div class="tdt-pair tdt-pair--image-left">
                         <div class="col-2">
                             <h4>Rapportering</h4>
-                            <p>Resultatet läser ni av i webbläsaren, steg för steg och utan att behöva leta i loggfiler.
-                            </p>
+                            <p>Resultatet sammanställs automatiskt efter varje körning och visas enkelt &ndash; i webbgränssnittet, eller
+                                skickat dit ni redan arbetar, t.ex. en kanal i Teams.</p>
                             <ul class="tdt-list">
-                                <li>Varje steg i testet redovisas för sig</li>
-                                <li>Tydligt vad som gick fel &ndash; och var</li>
-                                <li>Felmeddelandet i klartext</li>
-                                <li>Loggutdrag från just den tidpunkten</li>
-                                <li>Skärmbild från Maximo för varje steg</li>
-                                <li>Historik och resultat från tidigare körningar</li>
+                                <li>Resultat per teststeg, inte bara godkänt eller misslyckat för hela testet</li>
+                                <li>Vid fel: felmeddelandet i klartext, tillsammans med vilket steg som brast</li>
+                                <li>Loggutdrag från tidpunkten för felet, redan framplockat</li>
+                                <li>Skärmbild av Maximo för varje steg, så ni ser vad testet såg</li>
+                                <li>Historik över tidigare körningar, för att följa kvaliteten över tid</li>
+                                <li>Resultatet kan skickas automatiskt till en Teams-kanal</li>
                             </ul>
                         </div>
 
@@ -310,40 +315,40 @@
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
                         <div class="tdt-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
                         <h4>Snabbt</h4>
-                        <p>Då våra tester använder IBM Maximos eget ramverk för gränssnitt går tester mycket snabbare jämfört med tester
-                            som körs via en webbläsare. Vi har mätt upp tester som går upp till 100 gånger snabbare via TD Test.</p>
+                        <p>Eftersom testerna inte behöver gå omvägen via en webbläsare blir de mycket snabbare. Vi har
+                            mätt tester som går upp till 100 gånger snabbare med TD Test &ndash; det som tog en natt kan
+                            vara klart under en kafferast.</p>
                     </div>
 
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
                         <div class="tdt-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
                         <h4>Stabilt</h4>
-                        <p>TD Test kommunicerar direkt med IBM Maximo och inte via webbläsare och har därför inte de
-                            problem och brister som testramverk och verktyg som testar via sk webdriver uppvisar.
-                            IBM Maximos webbgränssnitt testas i samma stund som det genereras av applikationen,
-                            dvs innan det når en webbläsare. Detta gör testen både stabila, pålitliga och snabba.</p>
+                        <p>Vanliga testverktyg styr en webbläsare, och blir därmed känsliga för småsaker: en knapp som
+                            flyttat sig, en sida som laddar långsamt. TD Test pratar direkt med Maximo och kontrollerar
+                            gränssnittet redan innan det når webbläsaren. Resultatet är tester som går att lita på och
+                            som inte behöver skrivas om varje gång något ändras.</p>
                     </div>
 
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
                         <div class="tdt-icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></div>
                         <h4>Kostnadseffektivt</h4>
-                        <p>TD Test är enkelt och flexibelt sett till installation. Överallt där det går att starta
-                            en container går det att installera TD Test; t.ex. Podman, Docker eller Rancher.
-                            Även utveckling av anpassade automattester för Er verksamhet kommer att göras tidseffektivt
-                            eftersom TD Test är lättförståeligt och intuitivt med fördefinierade metoder för
-                            kommunikation både mot IBM Maximos användargränssnitt och affärslogik.</p>
+                        <p>TD Test är snabbt att komma igång med och kräver ingen egen dedikerad hårdvara &ndash; det körs som en
+                            container i den miljö ni redan har (t.ex. Podman, Docker eller Rancher). Att bygga tester för just
+                            er verksamhet går också fort, eftersom många av de vanliga momenten i Maximo redan finns färdiga att
+                            använda.</p>
                     </div>
 
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
                         <div class="tdt-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
                         <h4>Användarvänligt</h4>
-                        <p>TD Test har ett intuitivt gränssnitt med bland annat:</p>
+                        <p>Man behöver inte vara utvecklare för att följa upp ett test:</p>
                         <ul class="tdt-list">
-                            <li>Tydlig återrapportering av körda tester</li>
-                            <li>Uppföljning och översikt av historiska körningar</li>
-                            <li>Exakt återkoppling till var ett test går fel</li>
-                            <li>Loggöversikt och sammandrag</li>
-                            <li>Skärmbilder från testkörningar finns sparade för varje teststeg</li>
-                            <li>Funktioner som förenklar hantering av testdata</li>
+                            <li>Lättläst resultat efter varje körning</li>
+                            <li>Översikt och uppföljning av tidigare körningar</li>
+                            <li>Exakt besked om var testet gick fel</li>
+                            <li>Sammandrag av loggarna, samlat på ett ställe</li>
+                            <li>Sparade skärmbilder från varje steg i testet</li>
+                            <li>Testdata som hanteras automatiskt</li>
                         </ul>
                     </div>
 
@@ -370,40 +375,37 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Dynamisk anpassning av test efter gränssnittsförändringar i Maximo</th>
+                                <th scope="row">Testet anpassar sig automatiskt när Maximos gränssnitt ändras</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Klarar att köra samma test mot olika Maximo-versioner utan omskrivning
-                                    av test</th>
+                                <th scope="row">Samma test kan köras mot olika Maximo-versioner utan att skrivas om</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Inbyggt stöd för test av Maximo-integrationer</th>
+                                <th scope="row">Inbyggt stöd för test av integrationer</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Inbyggt stöd för test av Maximos affärslogik (backend)</th>
+                                <th scope="row">Inbyggt stöd för test av Maximos affärslogik</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Kan köra tester schemalagt utan krav på automatiseringsmotor (t.ex.
-                                    Jenkins)</th>
+                                <th scope="row">Kan schemalägga körningar utan extra verktyg (t.ex. Jenkins)</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Återrapportering av test med utförlig körningsinformation (t.ex. för
-                                    felsökning)</th>
+                                <th scope="row">Rapport med all information som behövs för felsökning</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row">Tester som inte påverkar systemet/databasen</th>
+                                <th scope="row">Tester som lämnar systemet och databasen opåverkade</th>
                                 <td><i class="fa-solid fa-xmark tdt-no" role="img" aria-label="Nej"></i></td>
                                 <td><i class="fa-solid fa-check tdt-yes" role="img" aria-label="Ja"></i></td>
                             </tr>
