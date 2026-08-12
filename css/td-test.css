@@ -26,17 +26,6 @@
     }
 }
 
-/* Intro block: full-width, but flowed in two columns so the lines stay readable */
-.tdt-lead {
-    float: none;
-    columns: 2;
-    column-gap: 60px;
-}
-
-.tdt-lead .tdt-list li {
-    break-inside: avoid;
-}
-
 /* Content lists (capabilities / reporting / execution) */
 /* padding/margin already zeroed by the global reset in style.css */
 .tdt-list {
@@ -170,10 +159,6 @@
 @media (max-width: 1023px) {
     .tdt-pair {
         grid-template-columns: 1fr;
-    }
-
-    .tdt-lead {
-        columns: 1;
     }
 }
 

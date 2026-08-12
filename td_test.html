@@ -209,30 +209,6 @@
                             Maximo och når därför både gränssnittet och affärslogiken m.m.</p>
                     </div>
 
-                    <!-- Testar Maximo med hjälp av Maximo -->
-                    <div class="col-1 tdt-lead">
-                        <ul class="tdt-list">
-                            <li><strong>Maximos gränssnitt</strong> testas precis som en användare skulle arbeta i det
-                                &ndash; men utan att någon webbläsare är inblandad.</li>
-                            <li><strong>Maximos affärslogik</strong> kan testas direkt, t.ex. arbetsorder, förebyggande
-                                underhåll och förråd.</li>
-                            <li><strong>Tydlig rapport</strong> efter varje körning, och <strong>historik</strong> över
-                                tidigare körningar.</li>
-                            <li><strong>Testdata sköter sig själv.</strong> Databasen lämnas opåverkad efter testet, så
-                                samma test kan köras om och om igen utan att gammal testdata blir kvar och skräpar ner.
-                            </li>
-                            <li><strong>Automatisk felsökningshjälp.</strong> När något går fel har TD Test redan sparat
-                                det ni behöver för att förstå varför:
-                                <ul>
-                                    <li>Skärmbilder från varje steg i testet.</li>
-                                    <li>Utdrag ur loggarna från exakt den tidpunkt då felet uppstod.</li>
-                                    <li>Hur mycket loggdetaljer som samlas in kan styras per test, utan att era vanliga
-                                        inställningar i Maximo påverkas.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
                     <!-- Heltäckande automattester (text + screenshot) -->
                     <div class="tdt-pair">
                         <div class="col-2">
@@ -244,7 +220,9 @@
                                 <li>Maximos affärslogik, t.ex. reglerna för hur en arbetsorder får ändras</li>
                                 <li>Integrationer med andra system</li>
                                 <li>Era egna anpassningar av Maximo</li>
-                                <li>Hela verksamhetsprocesser, så som ni faktiskt arbetar i Maximo</li>
+                                <li>Hela verksamhetsprocesser, så som ni faktiskt arbetar i Maximo <br>&ndash; inklusive
+                                    flöden där flera användare turas om, t.ex. attestering och överlämning, allt inom
+                                    ett och samma test</li>
                             </ul>
                         </div>
 
@@ -289,6 +267,8 @@
                                 <li>Schemalägg körningar, så att de sker automatiskt</li>
                                 <li>Starta testerna i webbläsaren &ndash; eller låt dem ingå i era befintliga
                                     automatiska flöden (t.ex. Jenkins), om ni har sådana. Det är inget krav.</li>
+                                <li>Välj hur mycket loggdetaljer som samlas in per test, utan att era vanliga
+                                    inställningar i Maximo påverkas</li>
                             </ul>
                         </div>
 
@@ -309,7 +289,7 @@
 
                     <div class="section-heading text-center">
                         <h3>FÖRDELAR</h3>
-                        <h2 class="section-title">Funktioner</h2>
+                        <h2 class="section-title">Varför TD Test?</h2>
                     </div>
 
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
@@ -332,22 +312,22 @@
                         <div class="tdt-icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></div>
                         <h4>Kostnadseffektivt</h4>
                         <p>TD Test är snabbt att komma igång med och kräver ingen egen dedikerad hårdvara &ndash; det körs som en
-                            container i den miljö ni redan har (t.ex. Podman, Docker eller Rancher). Att bygga tester för just
-                            er verksamhet går också fort, eftersom många av de vanliga momenten i Maximo redan finns färdiga att
-                            använda.</p>
+                            container i en miljö ni redan har (t.ex. Podman, Docker eller Rancher). Att bygga tester för
+                            just er verksamhet går också fort, så nyttan kommer tidigt.</p>
                     </div>
 
                     <div class="col-2 tdt-feature wow fadeInUp" data-wow-delay="0.1s">
                         <div class="tdt-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
                         <h4>Användarvänligt</h4>
-                        <p>Man behöver inte vara utvecklare för att följa upp ett test:</p>
+                        <p>Ett test skrivs så som en användare arbetar i Maximo &ndash; steg för steg, med samma
+                            benämningar som står på skärmen. Många moment är dessutom färdiga att använda, som att logga
+                            in eller gå till en applikation, så att skriva tester går snabbt och enkelt.</p>
+                        <p>Testerna är lika lätta att följa i webbgränssnittet:</p>
                         <ul class="tdt-list">
-                            <li>Lättläst resultat efter varje körning</li>
+                            <li>Tydlig återrapportering av körda tester</li>
+                            <li>Enkelt att följa ett test steg för steg</li>
+                            <li>Exakt besked om var ett test går fel</li>
                             <li>Översikt och uppföljning av tidigare körningar</li>
-                            <li>Exakt besked om var testet gick fel</li>
-                            <li>Sammandrag av loggarna, samlat på ett ställe</li>
-                            <li>Sparade skärmbilder från varje steg i testet</li>
-                            <li>Testdata som hanteras automatiskt</li>
                         </ul>
                     </div>
 
@@ -361,14 +341,14 @@
 
                     <div class="section-heading text-center">
                         <h3>JÄMFÖRELSE</h3>
-                        <h2 id="pricing-heading" class="section-title">TD Test vs. Webbläsarbaserade tester</h2>
+                        <h2 id="comparison-heading" class="section-title">TD Test vs. Webbläsarbaserade tester</h2>
                     </div>
 
-                    <table class="tdt-compare" aria-labelledby="pricing-heading">
+                    <table class="tdt-compare" aria-labelledby="comparison-heading">
                         <thead>
                             <tr>
                                 <th scope="col">Funktioner</th>
-                                <th scope="col">Webbaserade</th>
+                                <th scope="col">Webbläsarbaserade</th>
                                 <th scope="col">TD Test</th>
                             </tr>
                         </thead>
