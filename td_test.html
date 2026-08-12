@@ -199,29 +199,29 @@
                     <div class="section-heading text-center">
                         <h3>MÖJLIGHETER</h3>
                         <h2 class="section-title">Vad kan TD Test?</h2>
-                        <p class="section-subtitle">"Testar Maximo med hjälp av Maximo." <br>TD Test pratar via Maximo med både gränssnitt och affärsobjekt (MBO:er)</p>
+                        <p class="section-subtitle">"Testar Maximo med hjälp av Maximo." <br>TD Test arbetar inifrån
+                            Maximo och når därför både det användarna ser och logiken bakom.</p>
                     </div>
 
                     <!-- Testar Maximo med hjälp av Maximo -->
                     <div class="col-1 tdt-lead">
                         <ul class="tdt-list">
-                            <li>Maximos <strong>gränssnitt</strong> testas utan krav på webbläsare eller web-driver.</li>
-                            <li>Interna Maximo-funktioner kan testas via <strong>affärsobjekten (MBO:erna)</strong>;
-                                <br>t.ex. Arbetsorder, FU, Förråd.
+                            <li><strong>Maximos gränssnitt</strong> testas precis som en användare skulle arbeta i det
+                                &ndash; men utan att någon webbläsare behöver installeras eller startas.</li>
+                            <li><strong>Logiken bakom skärmen</strong> kan testas direkt, t.ex. att en arbetsorder, ett
+                                förebyggande underhåll eller ett förrådsuttag beter sig som det ska.</li>
+                            <li><strong>Tydlig rapport</strong> efter varje körning, och <strong>historik</strong> över
+                                tidigare körningar.</li>
+                            <li><strong>Testdata sköter sig själv.</strong> Databasen lämnas opåverkad efter testet, så
+                                samma test kan köras om och om igen utan att gammal testdata blir kvar och skräpar ner.
                             </li>
-                            <li><strong>Återrapportering</strong> och <strong>historik</strong> av körda test.</li>
-                            <li>Hantering av <strong>testdata</strong> &ndash; t.ex. <strong>databasisolering</strong> som gör att databasen lämnas
-                                opåverkad efter test. Samma test och data kan köras om och om. Gammal testdata finns inte
-                                kvar och skräpar ner.</li>
-                            <li><strong>Logghantering</strong> &ndash; samlar in logginformation för varje testögonblick för att
-                                underlätta eventuell felsökning:
+                            <li><strong>Automatisk felsökningshjälp.</strong> När något går fel har TD Test redan sparat
+                                det ni behöver för att förstå varför:
                                 <ul>
-                                    <li>Information kan hämtas från Maximo-, Java- och applikationsserverloggar.</li>
-                                    <li>Loggutskrifter vid aktuell tidpunkt för körning finns sparad med enkel åtkomst.
-                                    </li>
-                                    <li>Skärmbilder sparas för varje teststeg.</li>
-                                    <li>Detaljnivån på loggar kan styras per test och påverkar inte Maximos allmänna
-                                        logginställning.</li>
+                                    <li>Skärmbilder från varje steg i testet.</li>
+                                    <li>Utdrag ur loggarna från exakt den tidpunkt då felet uppstod.</li>
+                                    <li>Hur mycket loggdetaljer som samlas in kan styras per test, utan att era vanliga
+                                        inställningar i Maximo ändras.</li>
                                 </ul>
                             </li>
                         </ul>
@@ -231,15 +231,15 @@
                     <div class="tdt-pair">
                         <div class="col-2">
                             <h4>Olika typer av tester</h4>
-                            <p>Med TD Test kan du skapa heltäckande tester som verifierar de mest kritiska delarna i ert
-                                Maximo. TD Test stöder automattester som kontrollerar:</p>
+                            <p>Med TD Test kan ni täcka in de delar av Maximo som är viktigast för verksamheten
+                                &ndash; från det användarna klickar på till det som händer i bakgrunden:</p>
                             <ul class="tdt-list">
-                                <li>Maximos användargränssnitt (webb)</li>
-                                <li>Funktioner och egenskaper i Maximos affärsobjekt (MBO)</li>
-                                <li>Integrationer (MIF)</li>
-                                <li>Anpassningar (Java/Automatiseringsscript)</li>
-                                <li>Konfigureringar</li>
-                                <li>Era verksamhetsprocesser i Maximo</li>
+                                <li>Maximos användargränssnitt i webben</li>
+                                <li>Reglerna bakom skärmen, t.ex. hur en arbetsorder får ändras</li>
+                                <li>Informationsutbyte med andra system (integrationer)</li>
+                                <li>Era egna anpassningar av Maximo</li>
+                                <li>Inställningar och konfigurering</li>
+                                <li>Hela arbetsflöden, så som ni faktiskt arbetar i Maximo</li>
                             </ul>
                         </div>
 
@@ -254,15 +254,15 @@
                     <div class="tdt-pair tdt-pair--image-left">
                         <div class="col-2">
                             <h4>Rapportering</h4>
-                            <p>TD Test har en användarvänlig återrapportering av körda test via ett intuitivt
-                                webbgränssnitt.</p>
+                            <p>Resultatet läser ni av i webbläsaren, steg för steg och utan att behöva leta i loggfiler.
+                            </p>
                             <ul class="tdt-list">
-                                <li>Information visas per teststeg</li>
-                                <li>Tydlig info om vad som gått fel</li>
-                                <li>Aktuellt felmeddelande</li>
-                                <li>Utdrag från logg vid feltidpunkt</li>
-                                <li>Skärmbilder från Maximo sparas vid varje teststeg</li>
-                                <li>Historik och resultat över tidigare körningar</li>
+                                <li>Varje steg i testet redovisas för sig</li>
+                                <li>Tydligt vad som gick fel &ndash; och var</li>
+                                <li>Felmeddelandet i klartext</li>
+                                <li>Loggutdrag från just den tidpunkten</li>
+                                <li>Skärmbild från Maximo för varje steg</li>
+                                <li>Historik och resultat från tidigare körningar</li>
                             </ul>
                         </div>
 
@@ -277,14 +277,13 @@
                     <div class="tdt-pair">
                         <div class="col-2">
                             <h4>Flexibilitet</h4>
-                            <p>Med TD Test kan du enkelt och flexibelt välja hur du vill köra dina test.</p>
+                            <p>Ni väljer själva när och hur testerna ska köras.</p>
                             <ul class="tdt-list">
-                                <li>Enkelt att köra vid behov som stöd vid utveckling och förändring</li>
-                                <li>Automattester kan köras via automationsserver (t.ex. Jenkins) men det är inget
-                                    krav.</li>
-                                <li>Test kan köras enskilda eller grupperade (sviter)</li>
-                                <li>Testkörningar kan schemaläggas</li>
-                                <li>Automattester kan köras grafiskt via webb eller via konsol</li>
+                                <li>Kör direkt vid behov, t.ex. under pågående utvecklingsarbete</li>
+                                <li>Kör ett enskilt test eller en hel grupp av tester</li>
+                                <li>Schemalägg körningar, så att de sker automatiskt</li>
+                                <li>Starta testerna i webbläsaren &ndash; eller låt dem ingå i era befintliga
+                                    automatiska flöden (t.ex. Jenkins), om ni har sådana. Det är inget krav.</li>
                             </ul>
                         </div>
 
