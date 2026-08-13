@@ -882,9 +882,32 @@ h6 {
     padding: 0 0 15px 0;
 }
 
+/* h1 section titles keep the tighter h2 padding, and sit closer to the body text
+   since they have no subtitle line under them */
+h1.section-title {
+    padding: 14px 0 0 0;
+}
+
+.section-heading h1.section-title:after {
+    margin-top: 20px;
+}
+
 .section-subtitle {
     font-size: 18px;
     padding-top: 0;
+}
+
+/* Showcase Call to Action */
+
+.showcase-cta {
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.showcase-cta p {
+    font-size: 16px;
 }
 
 /* The small uppercase label above a section title. It is the section's real
@@ -922,6 +945,11 @@ h6 {
 
 .banner-spacer {
     height: 30px;
+}
+
+/* Showcase pages have no banner content, so their content clears the fixed header itself */
+.showcase-top {
+    padding-top: 60px;
 }
 
 #home h1 {

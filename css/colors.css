@@ -235,7 +235,9 @@ a,
 
 /* Primary Background and Text Colors */
 
-/* The orange rule belongs under the section title, never under the kicker. */
+/* The orange rule belongs under the section title, never under the kicker.
+   The showcase pages title with an h1.section-title, so .section-title covers
+   them too. */
 .section-heading h2:not(.section-kicker):after,
 .section-heading .section-title:after,
 .section-heading .banner-intro:after {
@@ -350,6 +352,16 @@ body {
     font-size: 18px;
     font-weight: 300;
     color: var(--section-subtitle);
+}
+
+/* Showcase Call to Action */
+
+.showcase-cta {
+    border-top-color: rgba(153, 153, 153, 0.3);
+}
+
+.showcase-cta p {
+    color: var(--footer-text);
 }
 
 /* Testimonial */
