@@ -819,10 +819,20 @@ h2 {
     padding: 14px 0;
 }
 
+/* Matches the banner h2 it replaced, so it keeps the heading spacing and does
+   not pick up the 25px line-height of a normal paragraph. */
+.banner-intro {
+    /* The reset above zeroes the margin on h1-h6 but not on p. */
+    margin: 0;
+    padding: 14px 0;
+    line-height: normal;
+}
+
 h3 {
     padding: 10px 0;
 }
 
+.card-title,
 h4 {
     padding: 7px 0;
 }
@@ -900,12 +910,24 @@ h1.section-title {
     font-size: 16px;
 }
 
-.section-heading h3 {
+/* The small uppercase label above a section title. It is the section's real
+   heading, so it is an h2 here; the h3 selector stays for the pages that have
+   not been converted yet. */
+.section-heading h3,
+.section-kicker {
     font-size: 14px;
     font-weight: bold;
     color: var(--section-heading);
     letter-spacing: 2px;
-    padding-bottom: 0;
+    padding: 10px 0 0;
+}
+
+/* Was an h2: keep its spacing and line height, and drop the margin a p gets
+   from the UA. */
+.section-title {
+    margin: 0;
+    padding: 14px 0;
+    line-height: normal;
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -965,7 +987,8 @@ h1.section-title {
     position: relative;
 }
 
-.icon-block h4 {
+.icon-block h4,
+.icon-block .card-title {
     font-weight: bold;
     padding-top: 0;
 }
@@ -1634,89 +1657,17 @@ blockquote {
     display: inline-block;
 }
 
-/* --------- 6.7 Pricing Table ---------- */
+/* --------- 6.7 Product Cards ---------- */
 
-.pricing-block-content {
-    background: var(--normal-text);
-    padding: 25px 0 25px 0;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
-    transition: all 0.2s ease-in-out 0s;
-    position: relative;
-    border: 10px solid var(--normal-text);
-    margin: auto;
-}
-
-
-.pricing-block ul {
-    list-style: none;
-    margin: 25px 0 25px 0;
-}
-
-.pricing-block li {
-    padding: 14px 0;
-    border-bottom: 1px dotted #e1e1e1;
-}
-
-.pricing-block li:last-of-type {
-    border: none;
-}
-
-.pricing-block h3 {
-    font-size: 17px;
-    text-transform: uppercase;
-    padding-bottom: 0;
-}
-
-.pricing-sub {
+.product-sub {
     font-style: italic;
     color: var(--section-subtitle);
     margin: 0 0 25px 0;
 }
 
-.pricing-content {
+.product-content {
     height: 300px;
 }
-
-/*Price*/
-
-.pricing {
-    /* background: #f5f5f5; */
-    padding: 25px;
-    position: relative;
-    height: 150px;
-}
-
-#td_asset_care_banner {
-    background: url("../images/banner-images/td_asset_care.webp") no-repeat center top;
-    background-size: cover;
-}
-
-#td_test_banner {
-    background: url("../images/banner-images/td_test.webp") no-repeat center top;
-    background-size: cover;
-}
-
-.price {
-    display: inline-block;
-    font-size: 62px;
-    font-weight: 700;
-    position: relative;
-}
-
-.price span {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    font-size: 22px;
-}
-
-.pricing p {
-    font-style: italic;
-    color: #b4b4b4;
-    line-height: auto;
-    margin: 0;
-}
-
 
 
 /*------------------------------------------------------------------------------------------*/

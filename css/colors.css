@@ -167,24 +167,8 @@ a,
         1px 1px var(--primary), -1px -1px var(--primary), 1px -1px var(--primary), -1px 1px var(--primary);
 }
 
-#pricing-heading.section-title {
+#product-heading.section-title {
     color: var(--normal-text);
-}
-
-.pricing-block {
-    color: var(--normal-text);
-}
-
-.pricing-block-content {
-    border-color: var(--secondary);
-    background: var(--secondary);
-    /* min-width: 335px; */
-    max-width: 355px;
-}
-
-.pricing-block-content:hover {
-    border-color: var(--primary);
-    /*#d2b356;*/
 }
 
 .backgroundimage-overlay {
@@ -251,31 +235,12 @@ a,
 
 /* Primary Background and Text Colors */
 
-/* .primary-color,
-.featured .pricing {
-    background-color: var(--primary);
-    /*#d2b356;
-} */
-
-/* .primary-color,
-.primary-color .section-title,
-.primary-color .section-subtitle,
-.featured .pricing,
-.featured .pricing p {
-    color: blue;
-} */
-
-.pricing {
-    color: var(--link-hover-active);
-}
-
-.featured .pricing {
-    background-color: var(--primary);
-    color: var(--normal-text);
-}
-
-.section-heading h1:after,
-.section-heading h2:after {
+/* The orange rule belongs under the section title, never under the kicker.
+   The showcase pages title with an h1.section-title, so .section-title covers
+   them too. */
+.section-heading h2:not(.section-kicker):after,
+.section-heading .section-title:after,
+.section-heading .banner-intro:after {
     background: var(--primary);
     /*#d2b356;*/
     content: "";
@@ -285,8 +250,8 @@ a,
     margin-top: 30px;
 }
 
-.text-center .section-heading h1:after,
-.text-center .section-heading h2:after {
+.text-center .section-heading h2:not(.section-kicker):after,
+.text-center .section-heading .section-title:after {
     margin: 30px auto 25px auto;
 }
 
@@ -362,7 +327,9 @@ body {
     /* color: var(--header-text) */
 }
 
-#home h2 {
+/* Banner intro. Body copy rather than a heading, but it keeps the look the
+   banner h2 had, orange rule included. */
+#home .banner-intro {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
@@ -412,10 +379,14 @@ body {
 
 /* About */
 
+/* An address element: italic by default, and it keeps the spacing of the h3 it
+   replaced. */
 #contact {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
+    font-style: normal;
+    padding: 10px 0;
     color: var(--normal-text)
 }
 
@@ -452,6 +423,9 @@ h3 {
     color: var(--header-text)
 }
 
+/* Card titles are h3 so they nest under the section heading, but they keep the
+   h4 look they had. The h4 selectors stay for the pages not converted yet. */
+.card-title,
 h4 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;

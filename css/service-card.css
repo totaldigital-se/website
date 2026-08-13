@@ -90,7 +90,8 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 */
-.overlay h4 {
+.overlay h4,
+.overlay .card-title {
     color: #ffffff;
     font-weight: bold;
 }
