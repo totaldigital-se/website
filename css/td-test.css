@@ -79,27 +79,21 @@
 }
 
 .tdt-shot {
-    /* Every screenshot is exported at exactly 1920x1416, so a fixed ratio is
-       safe here: it reserves the right slot while a lazy image loads and no
-       frame gets squashed. Keep the exports uniform or this starts to lie. */
+    /* The slide width is the constraint at every size, so fill it and take the
+       height from the ratio. Sizing by height instead would not work here:
+       `.row img` in style.css sets `height: auto` at a higher specificity and
+       would silently win, leaving nothing definite for the ratio to resolve
+       against — lazy slides would then reserve no space and pop in on scroll.
+       Every screenshot is exported at exactly 1920x1416; keep the exports
+       uniform or this ratio starts to lie. */
     aspect-ratio: 1920 / 1416;
-    height: 520px;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     display: block;
     border: 1px solid #555;
     border-radius: 12px;
     box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
-}
-
-/* Below the tour's max-width the slide, not the height, is the constraint —
-   let the image fill it and take its height from the ratio. */
-@media (max-width: 1023px) {
-    .tdt-shot {
-        height: auto;
-        width: 100%;
-    }
 }
 
 /* Feature grid (5 icons) — centering is inherited from the section's
