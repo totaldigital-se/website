@@ -364,10 +364,14 @@ body {
 
 /* About */
 
+/* An address element: italic by default, and it keeps the spacing of the h3 it
+   replaced. */
 #contact {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
+    font-style: normal;
+    padding: 10px 0;
     color: var(--normal-text)
 }
 
