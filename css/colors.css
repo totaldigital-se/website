@@ -411,6 +411,9 @@ h3 {
     color: var(--header-text)
 }
 
+/* Card titles are h3 so they nest under the section heading, but they keep the
+   h4 look they had. The h4 selectors stay for the pages not converted yet. */
+.card-title,
 h4 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;

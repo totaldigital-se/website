@@ -832,6 +832,7 @@ h3 {
     padding: 10px 0;
 }
 
+.card-title,
 h4 {
     padding: 7px 0;
 }
@@ -958,7 +959,8 @@ h6 {
     position: relative;
 }
 
-.icon-block h4 {
+.icon-block h4,
+.icon-block .card-title {
     font-weight: bold;
     padding-top: 0;
 }
