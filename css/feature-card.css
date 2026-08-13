@@ -122,3 +122,11 @@
     margin: 0 auto;
     min-height: 765px;
 }
+
+/* Product name. It is an h3 so the page keeps a single h1, but it is sized
+   like the h1 it replaced. */
+.product h3 {
+    font-size: 40px;
+    font-weight: 300;
+    padding: 20px 0;
+}
