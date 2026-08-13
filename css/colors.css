@@ -167,7 +167,7 @@ a,
         1px 1px var(--primary), -1px -1px var(--primary), 1px -1px var(--primary), -1px 1px var(--primary);
 }
 
-#pricing-heading.section-title {
+#product-heading.section-title {
     color: var(--normal-text);
 }
 

@@ -90,6 +90,9 @@
     position: absolute;
     bottom: 16px;
     right: 20px;
+    /* Purely an affordance. Without this it sits on top of the stretched card
+       link and swallows the clicks it is advertising. */
+    pointer-events: none;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
@@ -110,6 +113,21 @@
     /* Forces text to keep the colors you already defined */
     display: inline-block;
     /* Keeps the link wrapping neatly around the card */
+}
+
+/* The product cards contain their own mailto button, so the card itself cannot
+   be wrapped in a link: nested anchors are invalid and the parser splits them
+   apart. The title link is stretched across the card instead, and the button is
+   lifted above that overlay so it stays clickable. */
+.card-link-stretch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.feature-card .button {
+    position: relative;
+    z-index: 1;
 }
 
 .showcase {
