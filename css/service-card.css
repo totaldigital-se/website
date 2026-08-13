@@ -128,22 +128,6 @@ img.showcase-image {
     box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
 }
 
-/* Showcase hero image, same framing as .service-card but without the text overlay */
-/* img.* to win over .row img { height: auto } in style.css */
-img.showcase-image {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border: 1px solid #555;
-    border-radius: 12px;
-    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
-}
-
-.td-test {
-    background-image: url("../images/banner-images/td_test.webp");
-}
-
 @media (max-width: 480px) {
     .overlay-showcase h3 {
         font-size: 20px;
