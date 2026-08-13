@@ -819,6 +819,15 @@ h2 {
     padding: 14px 0;
 }
 
+/* Matches the banner h2 it replaced, so it keeps the heading spacing and does
+   not pick up the 25px line-height of a normal paragraph. */
+.banner-intro {
+    /* The reset above zeroes the margin on h1-h6 but not on p. */
+    margin: 0;
+    padding: 14px 0;
+    line-height: normal;
+}
+
 h3 {
     padding: 10px 0;
 }
