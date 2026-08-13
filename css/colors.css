@@ -385,6 +385,16 @@ body {
     color: var(--section-subtitle);
 }
 
+/* Showcase Call to Action */
+
+.showcase-cta {
+    border-top-color: rgba(153, 153, 153, 0.3);
+}
+
+.showcase-cta p {
+    color: var(--footer-text);
+}
+
 /* Testimonial */
 
 .testimonial q {
