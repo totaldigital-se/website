@@ -1606,38 +1606,7 @@ blockquote {
     display: inline-block;
 }
 
-/* --------- 6.7 Pricing Table ---------- */
-
-.pricing-block-content {
-    background: var(--normal-text);
-    padding: 25px 0 25px 0;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
-    transition: all 0.2s ease-in-out 0s;
-    position: relative;
-    border: 10px solid var(--normal-text);
-    margin: auto;
-}
-
-
-.pricing-block ul {
-    list-style: none;
-    margin: 25px 0 25px 0;
-}
-
-.pricing-block li {
-    padding: 14px 0;
-    border-bottom: 1px dotted #e1e1e1;
-}
-
-.pricing-block li:last-of-type {
-    border: none;
-}
-
-.pricing-block h3 {
-    font-size: 17px;
-    text-transform: uppercase;
-    padding-bottom: 0;
-}
+/* --------- 6.7 Product Cards ---------- */
 
 .product-sub {
     font-style: italic;
@@ -1648,47 +1617,6 @@ blockquote {
 .product-content {
     height: 300px;
 }
-
-/*Price*/
-
-.pricing {
-    /* background: #f5f5f5; */
-    padding: 25px;
-    position: relative;
-    height: 150px;
-}
-
-#td_asset_care_banner {
-    background: url("../images/banner-images/td_asset_care.webp") no-repeat center top;
-    background-size: cover;
-}
-
-#td_test_banner {
-    background: url("../images/banner-images/td_test.webp") no-repeat center top;
-    background-size: cover;
-}
-
-.price {
-    display: inline-block;
-    font-size: 62px;
-    font-weight: 700;
-    position: relative;
-}
-
-.price span {
-    position: absolute;
-    top: 0;
-    left: -20px;
-    font-size: 22px;
-}
-
-.pricing p {
-    font-style: italic;
-    color: #b4b4b4;
-    line-height: auto;
-    margin: 0;
-}
-
 
 
 /*------------------------------------------------------------------------------------------*/

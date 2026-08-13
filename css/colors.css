@@ -171,22 +171,6 @@ a,
     color: var(--normal-text);
 }
 
-.pricing-block {
-    color: var(--normal-text);
-}
-
-.pricing-block-content {
-    border-color: var(--secondary);
-    background: var(--secondary);
-    /* min-width: 335px; */
-    max-width: 355px;
-}
-
-.pricing-block-content:hover {
-    border-color: var(--primary);
-    /*#d2b356;*/
-}
-
 .backgroundimage-overlay {
     position: absolute;
     background-color: var(--secondary);
@@ -250,29 +234,6 @@ a,
 
 
 /* Primary Background and Text Colors */
-
-/* .primary-color,
-.featured .pricing {
-    background-color: var(--primary);
-    /*#d2b356;
-} */
-
-/* .primary-color,
-.primary-color .section-title,
-.primary-color .section-subtitle,
-.featured .pricing,
-.featured .pricing p {
-    color: blue;
-} */
-
-.pricing {
-    color: var(--link-hover-active);
-}
-
-.featured .pricing {
-    background-color: var(--primary);
-    color: var(--normal-text);
-}
 
 .section-heading h2:after {
     background: var(--primary);
