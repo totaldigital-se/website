@@ -886,12 +886,24 @@ h6 {
     padding-top: 0;
 }
 
-.section-heading h3 {
+/* The small uppercase label above a section title. It is the section's real
+   heading, so it is an h2 here; the h3 selector stays for the pages that have
+   not been converted yet. */
+.section-heading h3,
+.section-kicker {
     font-size: 14px;
     font-weight: bold;
     color: var(--section-heading);
     letter-spacing: 2px;
-    padding-bottom: 0;
+    padding: 10px 0 0;
+}
+
+/* Was an h2: keep its spacing and line height, and drop the margin a p gets
+   from the UA. */
+.section-title {
+    margin: 0;
+    padding: 14px 0;
+    line-height: normal;
 }
 
 /*------------------------------------------------------------------------------------------*/

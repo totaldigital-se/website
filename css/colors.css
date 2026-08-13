@@ -235,7 +235,9 @@ a,
 
 /* Primary Background and Text Colors */
 
-.section-heading h2:after,
+/* The orange rule belongs under the section title, never under the kicker. */
+.section-heading h2:not(.section-kicker):after,
+.section-heading .section-title:after,
 .section-heading .banner-intro:after {
     background: var(--primary);
     /*#d2b356;*/
@@ -246,7 +248,8 @@ a,
     margin-top: 30px;
 }
 
-.text-center .section-heading h2:after {
+.text-center .section-heading h2:not(.section-kicker):after,
+.text-center .section-heading .section-title:after {
     margin: 30px auto 25px auto;
 }
 
