@@ -26,8 +26,11 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Total Digital" />
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />
+    <!--Favicon and App Icons-->
+    <link rel="icon" href="images/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ff4b00" />
 
     <!-- Main CSS Files -->
     <link rel="stylesheet" href="css/style.css">
@@ -53,6 +56,31 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&display=swap' rel='stylesheet' type='text/css'>
+
+    <!--Structured Data-->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.totaldigital.se/#organization",
+        "name": "Total Digital AB",
+        "url": "https://www.totaldigital.se/",
+        "logo": "https://www.totaldigital.se/images/favicon.png",
+        "email": "info@totaldigital.se",
+        "telephone": "+46101010070",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Fabriksgatan 4",
+            "postalCode": "531 60",
+            "addressLocality": "Lidköping",
+            "addressCountry": "SE"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/total-digital-it-solutions",
+            "https://github.com/orgs/totaldigital-se/repositories"
+        ]
+    }
+    </script>
 </head>
 
 <body>
