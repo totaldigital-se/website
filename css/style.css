@@ -404,6 +404,11 @@ section {
 }
 
 #logo img {
+    /* The width/height attributes on the logo let the browser reserve the right
+       box before the image loads. They also act as presentational hints, so both
+       axes are handed back to auto here and max-height keeps doing the sizing. */
+    width: auto;
+    height: auto;
     max-height: 22px;
     vertical-align: middle;
     margin-right: 15px;
