@@ -79,11 +79,10 @@
 }
 
 .tdt-shot {
-    /* The `auto` keyword makes this a fallback: it reserves the slot while a
-       lazy image is still loading, then yields to the image's real ratio, so
-       the slightly wider maximo-gui frame is not squashed to match. Without
-       it the slide collapses to nothing and the section jumps on scroll. */
-    aspect-ratio: auto 2540 / 1874;
+    /* Every screenshot is exported at exactly 1920x1416, so a fixed ratio is
+       safe here: it reserves the right slot while a lazy image loads and no
+       frame gets squashed. Keep the exports uniform or this starts to lie. */
+    aspect-ratio: 1920 / 1416;
     height: 520px;
     width: auto;
     max-width: 100%;
