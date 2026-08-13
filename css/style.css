@@ -925,6 +925,11 @@ h1.section-title {
     height: 30px;
 }
 
+/* Showcase pages have no banner content, so their content clears the fixed header itself */
+.showcase-top {
+    padding-top: 60px;
+}
+
 #home h1 {
     padding-top: 5%;
 }
