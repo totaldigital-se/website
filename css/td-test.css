@@ -3,26 +3,24 @@
    Reuses the global palette from colors.css (var(--primary) etc.)
    -------------------------------------------------------------------------- */
 
-/* Two-up rows: text beside screenshot.
-   Grid instead of the global float grid so an uneven pair can't snag the
-   next float. Grid items ignore float, but not width — hence the reset.
-   Text always comes first in the DOM; image-left rows swap visually only. */
-.tdt-pair {
+/* The three capability blocks, side by side.
+   Grid instead of the global float grid so an uneven column can't snag the
+   next float; it also sits beside floats instead of clearing them. */
+.tdt-trio {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px;
     align-items: start;
-    /* a grid container sits beside floats instead of clearing them */
     clear: both;
 }
 
-.tdt-pair>[class*='col-'] {
-    width: auto;
+.tdt-trio>* {
     min-width: 0;
 }
 
-@media (min-width: 1024px) {
-    .tdt-pair--image-left .tdt-media {
-        order: -1;
+@media (max-width: 1023px) {
+    .tdt-trio {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -64,15 +62,45 @@
     content: none;
 }
 
-/* Screenshot slots */
+/* Product tour carousel.
+   The screenshots are all cropped to roughly 4:3 (1.355–1.367), so a fixed
+   height gives every slide the same frame without cropping anything.
+   Full size is one click away — the images carry data-zoomable, see
+   css/image-zoom.css. */
+.tdt-tour {
+    /* leave the outside gutters for the arrows on wide screens.
+       float:none so the auto margins actually center it — the global
+       .col-1 floats, and a floated box ignores them. */
+    float: none;
+    max-width: 900px;
+    /* the top margin separates the tour from the trio above it, now that
+       there is no section heading between the two */
+    margin: 60px auto 0;
+}
+
 .tdt-shot {
-    width: 100%;
-    max-height: 420px;
-    object-fit: cover;
+    /* The `auto` keyword makes this a fallback: it reserves the slot while a
+       lazy image is still loading, then yields to the image's real ratio, so
+       the slightly wider maximo-gui frame is not squashed to match. Without
+       it the slide collapses to nothing and the section jumps on scroll. */
+    aspect-ratio: auto 2540 / 1874;
+    height: 520px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
     display: block;
     border: 1px solid #555;
     border-radius: 12px;
     box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
+}
+
+/* Below the tour's max-width the slide, not the height, is the constraint —
+   let the image fill it and take its height from the ratio. */
+@media (max-width: 1023px) {
+    .tdt-shot {
+        height: auto;
+        width: 100%;
+    }
 }
 
 /* Feature grid (5 icons) — centering is inherited from the section's
@@ -152,14 +180,6 @@
 
 .tdt-compare .tdt-no {
     color: #666;
-}
-
-/* Stack at the same breakpoint the global grid drops to one column.
-   DOM order is already text-then-image, so stacking needs no reordering. */
-@media (max-width: 1023px) {
-    .tdt-pair {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 600px) {

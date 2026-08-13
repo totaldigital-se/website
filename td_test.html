@@ -34,6 +34,12 @@
     <!-- TD Test Page CSS -->
     <link href="css/td-test.css" rel="stylesheet" type="text/css">
 
+    <!-- Click-to-enlarge images (opt in with data-zoomable) -->
+    <link href="css/image-zoom.css" rel="stylesheet" type="text/css">
+
+    <!-- Image carousel (opt in with data-image-carousel) -->
+    <link href="css/image-carousel.css" rel="stylesheet" type="text/css">
+
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
@@ -210,9 +216,10 @@
                             Maximo och når därför både gränssnittet och affärslogiken m.m.</p>
                     </div>
 
-                    <!-- Heltäckande automattester (text + screenshot) -->
-                    <div class="tdt-pair">
-                        <div class="col-2">
+                    <!-- The three capability blocks. Screenshots no longer sit
+                         beside them: they belong together as a tour, see below. -->
+                    <div class="tdt-trio">
+                        <div>
                             <h4>Olika typer av tester</h4>
                             <p>Med TD Test kan ni täcka in de delar av Maximo som är viktigast för verksamheten
                                 &ndash; från det användarna klickar på till det som händer i bakgrunden:</p>
@@ -221,25 +228,16 @@
                                 <li>Maximos affärslogik, t.ex. reglerna för hur en arbetsorder får ändras</li>
                                 <li>Integrationer med andra system</li>
                                 <li>Era egna anpassningar av Maximo</li>
-                                <li>Hela verksamhetsprocesser, så som ni faktiskt arbetar i Maximo <br>&ndash; inklusive
+                                <li>Hela verksamhetsprocesser, så som ni faktiskt arbetar i Maximo &ndash; inklusive
                                     flöden där flera användare turas om, t.ex. attestering och överlämning, allt inom
                                     ett och samma test</li>
                             </ul>
                         </div>
 
-                        <div class="col-2 tdt-media">
-                            <!-- TODO: replace with real screenshot (WebP). tdtest.se source: Screenshot 2023-08-19 131744.png -->
-                            <img class="tdt-shot" src="images/gallery-images/sensor.jpg" loading="lazy"
-                                alt="TD Test testtäckning i Maximo">
-                        </div>
-                    </div>
-
-                    <!-- Rapportering (image left) -->
-                    <div class="tdt-pair tdt-pair--image-left">
-                        <div class="col-2">
+                        <div>
                             <h4>Rapportering</h4>
-                            <p>Resultatet sammanställs automatiskt efter varje körning och visas enkelt &ndash; i webbgränssnittet, eller
-                                skickat dit ni redan arbetar, t.ex. en kanal i Teams.</p>
+                            <p>Resultatet sammanställs automatiskt efter varje körning och visas enkelt &ndash; i
+                                webbgränssnittet, eller skickat dit ni redan arbetar, t.ex. en kanal i Teams.</p>
                             <ul class="tdt-list">
                                 <li>Resultat per teststeg, inte bara godkänt eller misslyckat för hela testet</li>
                                 <li>Vid fel: felmeddelandet i klartext, tillsammans med vilket steg som brast</li>
@@ -250,16 +248,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-2 tdt-media">
-                            <!-- TODO: replace with real reporting screenshot (WebP). tdtest.se source: Screenshot 2023-08-19 131744.png -->
-                            <img class="tdt-shot" src="images/gallery-images/sensor.jpg" loading="lazy"
-                                alt="TD Test återrapportering av testkörningar">
-                        </div>
-                    </div>
-
-                    <!-- Automatiserade testkörningar (image right) -->
-                    <div class="tdt-pair">
-                        <div class="col-2">
+                        <div>
                             <h4>Flexibilitet</h4>
                             <p>Ni väljer själva när och hur testerna ska köras.</p>
                             <ul class="tdt-list">
@@ -272,17 +261,58 @@
                                     inställningar i Maximo påverkas</li>
                             </ul>
                         </div>
+                    </div>
 
-                        <div class="col-2 tdt-media">
-                            <!-- TODO: replace with real execution screenshot (WebP). tdtest.se source: Screenshot 2023-08-19 133052.png -->
-                            <img class="tdt-shot" src="images/gallery-images/sensor.jpg" loading="lazy"
-                                alt="TD Test automatiserade testkörningar">
+                    <div class="col-1 tdt-tour">
+                        <div class="image-carousel" data-image-carousel>
+                            <div class="image-carousel-track">
+
+                                <figure class="image-carousel-slide">
+                                    <img class="tdt-shot" src="images/product-images/td-test/landing-page.png"
+                                        width="2538" height="1872" loading="lazy"
+                                        alt="Startsidan i TD Test med testsviter och senaste körningar" data-zoomable>
+                                    <figcaption><strong>Startsidan</strong> &ndash; en överblick av läget just nu.
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="image-carousel-slide">
+                                    <img class="tdt-shot" src="images/product-images/td-test/test-runs-history.png" width="2084"
+                                        height="1817" loading="lazy" alt="Historik över tidigare testkörningar i TD Test"
+                                        data-zoomable>
+                                    <figcaption><strong>Körningshistorik</strong> &ndash; tidigare körningar, så ni
+                                        kan följa kvaliteten över tid.</figcaption>
+                                </figure>
+
+                                <figure class="image-carousel-slide">
+                                    <img class="tdt-shot" src="images/product-images/td-test/test-run-report.png"
+                                        width="2090" height="1836" loading="lazy"
+                                        alt="Detaljer för en testkörning i TD Test" data-zoomable>
+                                    <figcaption><strong>Körningsdetaljer</strong> &ndash; resultatet för varje test som
+                                        ingick i körningen.</figcaption>
+                                </figure>
+
+                                <figure class="image-carousel-slide">
+                                    <img class="tdt-shot" src="images/product-images/td-test/test-case-report.png"
+                                        width="2091" height="1836" loading="lazy"
+                                        alt="Detaljer för ett enskilt testfall i TD Test, med källkod" data-zoomable>
+                                    <figcaption><strong>Testfallsdetaljer</strong> &ndash; steg för steg, med testets
+                                        källkod bredvid för att se vad som testades.</figcaption>
+                                </figure>
+
+                                <figure class="image-carousel-slide">
+                                    <img class="tdt-shot" src="images/product-images/td-test/maximo-gui.png"
+                                        width="3022" height="1640" loading="lazy"
+                                        alt="Sparad skärmbild av Maximo från ett teststeg" data-zoomable>
+                                    <figcaption><strong>Sparad Maximo-vy</strong> &ndash; exakt vad Maximos gränssnitt var i det teststeget.</figcaption>
+                                </figure>
+
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </section>
-            <!--End of What can TD Test do-->
+            <!--End of Product tour-->
 
             <!--Features-->
             <section id="funktioner" class="text-center scrollto clearfix">
@@ -457,6 +487,8 @@
     <script src="js/jquery.stickyNavbar.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/site.js"></script>
+    <script src="js/image-zoom.js"></script>
+    <script src="js/image-carousel.js"></script>
 
 </body>
 
