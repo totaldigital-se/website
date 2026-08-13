@@ -116,20 +116,16 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     background-image: url("../images/gallery-images/training-course.webp");
 }
 
-.railway-safety {
-    background-image: url("../images/showcase-images/crm3000.webp");
-}
-
-.sar-processing {
-    background-image: url("../images/showcase-images/interferogram.webp");
-}
-
-.leak-detection {
-    background-image: url("../images/showcase-images/waterleak.webp");
-}
-
-.raildamage {
-    background-image: url("../images/showcase-images/raildamage.webp");
+/* Showcase hero image, same framing as .service-card but without the text overlay */
+/* img.* to win over .row img { height: auto } in style.css */
+img.showcase-image {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid #555;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
 }
 
 .td-asset-care {
