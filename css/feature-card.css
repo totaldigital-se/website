@@ -148,3 +148,76 @@
     font-weight: 300;
     padding: 20px 0;
 }
+
+/* Below the tablet breakpoint the two product columns are 100% wide, so the
+   section becomes a ~1600px stack that has to be scrolled past. The sitewide
+   image carousel (css/image-carousel.css + js/image-carousel.js) supplies the
+   track, the arrows and the dots; these rules only size the product slides and
+   hand the floated two-column layout back on desktop. */
+@media (max-width: 767px) {
+    /* The side padding is what lets a slide sit centred: it is the gutter the
+       neighbouring card peeks through, at both ends of the track too. */
+    .product-track.image-carousel-track {
+        gap: 16px;
+        padding: 8px 11% 16px;
+    }
+
+    /* Cancel the float and the 50% width the column grid hands these. */
+    .product-track>.image-carousel-slide {
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+
+    /* The fixed width and the height that equalises the desktop pair both
+       fight the track; the flex row already stretches both cards to the
+       tallest one. */
+    .product-track .product {
+        width: auto;
+        margin: 0;
+        min-height: 0;
+        height: 100%;
+    }
+
+    /* The cards are ~750px tall, so an arrow centred on the track would land
+       halfway down a body of text. Put them on the dot row instead, where they
+       sit at a fixed spot no matter how the card copy reflows. */
+    .product-carousel .image-carousel-dots {
+        align-items: center;
+        min-height: 36px;
+        margin-top: 8px;
+    }
+
+    .product-carousel .image-carousel-arrow {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+        line-height: 36px;
+    }
+
+    .product-carousel .image-carousel-arrow--prev {
+        left: 15px;
+    }
+
+    .product-carousel .image-carousel-arrow--next {
+        right: 15px;
+    }
+}
+
+/* Desktop keeps the plain floated columns: no track, and the affordances the
+   script injected have nothing to scroll. */
+@media (min-width: 768px) {
+    .product-track.image-carousel-track {
+        display: block;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .product-carousel .image-carousel-arrow,
+    .product-carousel .image-carousel-dots {
+        display: none;
+    }
+}

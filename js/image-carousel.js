@@ -24,6 +24,11 @@
 
         var current = 0;
 
+        /* Defaults describe an image carousel; a carousel of something else
+           renames itself with data-carousel-label / data-carousel-noun. */
+        var groupLabel = carousel.getAttribute('data-carousel-label') || 'Bildspel';
+        var noun = carousel.getAttribute('data-carousel-noun') || 'bild';
+
         function arrow(direction, label, glyph) {
             var button = document.createElement('button');
             button.type = 'button';
@@ -49,8 +54,8 @@
             });
         }
 
-        arrow('prev', 'Föregående bild', 'left');
-        arrow('next', 'Nästa bild', 'right');
+        arrow('prev', 'Föregående ' + noun, 'left');
+        arrow('next', 'Nästa ' + noun, 'right');
 
         var dots = document.createElement('div');
         dots.className = 'image-carousel-dots';
@@ -59,7 +64,7 @@
             var dot = document.createElement('button');
             dot.type = 'button';
             dot.className = 'image-carousel-dot';
-            dot.setAttribute('aria-label', 'Gå till bild ' + (index + 1) + ' av ' + slides.length);
+            dot.setAttribute('aria-label', 'Gå till ' + noun + ' ' + (index + 1) + ' av ' + slides.length);
             dot.addEventListener('click', function () {
                 go(index);
             });
@@ -100,10 +105,23 @@
         });
 
         /* Keyboard control once the carousel has focus. The track is
-           focusable so this is reachable without a mouse. */
-        track.setAttribute('tabindex', '0');
+           focusable so this is reachable without a mouse — but only while it
+           actually scrolls: the product carousel goes back to a plain column
+           layout on desktop, and a tab stop on a static block is dead weight. */
         track.setAttribute('role', 'group');
-        track.setAttribute('aria-label', 'Bildspel');
+        track.setAttribute('aria-label', groupLabel);
+
+        function syncFocusable() {
+            if (track.scrollWidth > track.clientWidth + 1) {
+                track.setAttribute('tabindex', '0');
+            } else {
+                track.removeAttribute('tabindex');
+            }
+        }
+
+        syncFocusable();
+        window.addEventListener('resize', syncFocusable);
+
         track.addEventListener('keydown', function (e) {
             if (e.key === 'ArrowLeft') {
                 e.preventDefault();
