@@ -134,8 +134,7 @@ body {
 
 /* Default Link Color */
 
-a,
-.la-ball-triangle-path {
+a {
     color: var(--primary);
     /*var(--primary); */
     /*#d2b356;*/
@@ -188,15 +187,15 @@ a,
 /* Transparent Navigation Color on a Banner */
 
 #header nav a,
-#header i {
+#header .svg-icon {
     color: var(--link);
     /*var(--header-text);*/
 }
 
 #header nav a:hover,
-#header i:hover,
+#header .svg-icon:hover,
 #header.nav-solid a:hover,
-#header.nav-solid i:hover {
+#header.nav-solid .svg-icon:hover {
     color: var(--link-hover-active);
     /*var(--header-text);*/
 }
@@ -210,7 +209,7 @@ a,
 
 #header.nav-solid,
 #header.nav-solid a,
-#header.nav-solid i,
+#header.nav-solid .svg-icon,
 #nav-mobile ul li a {
     color: var(--link);
     /*var(--secondary);*/
@@ -258,7 +257,7 @@ a,
 /* Primary Icon Colors */
 
 .primary-color .icon i,
-.primary-color i {
+.primary-color .svg-icon {
     color: var(--normal-text);
 }
 
@@ -531,6 +530,6 @@ input[type="submit"]:hover {
 
 /* Footer Icon Color */
 
-#landing-footer i {
+#landing-footer .svg-icon {
     color: var(--footer-text);
 }

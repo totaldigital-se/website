@@ -6,6 +6,13 @@
 (function () {
     'use strict';
 
+    /* Chevrons from Font Awesome Free 6.7.2 (icons: CC BY 4.0), inlined for the
+       same reason as the rest of the icons: no CDN stylesheet, no webfont. */
+    var CHEVRON = {
+        left: 'M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z',
+        right: 'M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'
+    };
+
     var carousels = document.querySelectorAll('[data-image-carousel]');
     if (!carousels.length) {
         return;
@@ -29,7 +36,8 @@
             button.type = 'button';
             button.className = 'image-carousel-arrow image-carousel-arrow--' + direction;
             button.setAttribute('aria-label', label);
-            button.innerHTML = '<i class="fa-solid fa-chevron-' + glyph + '" aria-hidden="true"></i>';
+            button.innerHTML = '<svg class="svg-icon" viewBox="0 0 320 512" aria-hidden="true" focusable="false" '
+                + 'xmlns="http://www.w3.org/2000/svg"><path d="' + CHEVRON[glyph] + '" /></svg>';
             button.addEventListener('click', function () {
                 /* wrap around, so neither end is a dead button */
                 go(direction === 'prev'

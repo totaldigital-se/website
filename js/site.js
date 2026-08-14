@@ -45,16 +45,9 @@ $(document).ready(function () {
 		}
 	});
 
-});
-
-
-/* Preloader and animations */
-$(window).load(function () { // makes sure the whole site is loaded
-	$('#status').fadeOut(); // will first fade out the loading animation
-	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	$('body').delay(350).css({'overflow-y': 'visible'});
-
-	/* WOW Elements */
+	/* WOW Elements. Started here rather than on window.load: WOW hides every
+	   .wow element until it initialises, so waiting for images to finish would
+	   keep half the page invisible long after it could have been read. */
 	if (typeof WOW == 'function') {
 		new WOW().init();
 	}
