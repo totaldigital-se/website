@@ -2523,8 +2523,10 @@ blockquote {
     } */
 
 
+    /* Same side gutter as the band below 480px, so a card is inset from the
+       screen edge at every phone width instead of going full-bleed here. */
     .row {
-        padding: 15px 0 !important;
+        padding: 15px !important;
     }
 
     .col-1,
