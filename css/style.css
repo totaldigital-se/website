@@ -595,6 +595,124 @@ section {
     opacity: 1;
 }
 
+/* The language switcher rides along at the end of the nav list so the mobile
+   menu, which is cloned from #nav-main, picks it up too. It is a <details>, so
+   the dropdown gets native mouse, touch and keyboard behaviour without a line
+   of script — which is also what lets it survive that clone, since there is no
+   event handler to copy across.
+
+   The options deliberately sit in a <div> rather than a <ul>: site.js expands
+   the mobile menu with $("nav#nav-mobile ul"), which would match a nested list
+   and slide the dropdown open along with the menu. */
+#header nav .nav-lang {
+    position: relative;
+}
+
+#header nav .nav-lang summary {
+    /* Stays an inline line box on purpose: the nav items are baseline-aligned
+       inline-blocks, and a flex or grid summary has no text baseline, so it
+       drops out of that alignment and shunts every other link down 3px. */
+    height: 71px;
+    line-height: 71px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--link);
+    opacity: 0.75;
+    /* Hides the disclosure triangle: list-style for Firefox, the pseudo-element
+       below for WebKit. The globe is the affordance. */
+    list-style: none;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+#header nav .nav-lang summary::-webkit-details-marker {
+    display: none;
+}
+
+#header nav .nav-lang summary:hover,
+#header nav .nav-lang[open] summary {
+    opacity: 1;
+}
+
+/* The globe is the entire control now, so it carries a little more weight than
+   the 1em inline icons elsewhere on the page. */
+#header nav .nav-lang summary .svg-icon {
+    width: 1.25em;
+    height: 1.25em;
+    /* .svg-icon's -0.125em is tuned for an icon set beside text. Alone in the
+       line box the globe reads high, so drop it onto the centre of the link
+       labels either side of it. */
+    vertical-align: -0.24em;
+    /* The nav-solid rule paints a background onto .svg-icon. That is invisible
+       against the header itself, but the mobile menu sits the globe on a dark
+       panel, where it shows up as an orange tile. */
+    background: transparent;
+}
+
+#header nav .lang-options {
+    padding: 6px 0;
+    border-radius: 3px;
+    background: var(--secondary);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    text-transform: none;
+}
+
+#header nav .lang-options .lang-option {
+    display: block;
+    height: auto;
+    line-height: 1.4;
+    padding: 8px 16px;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    color: var(--link);
+    /* nav-solid paints every header link with the header colour; the options
+       sit on their own surface and must not inherit it. */
+    background: transparent;
+    opacity: 0.8;
+}
+
+#header nav .lang-options a.lang-option:hover {
+    color: var(--link);
+    background: rgba(255, 255, 255, 0.08);
+    opacity: 1;
+}
+
+#header nav .lang-options .is-current {
+    font-weight: 700;
+    border-left-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+    opacity: 1;
+    cursor: default;
+}
+
+/* Wide nav: the panel hangs below the globe, right-aligned so it cannot push
+   past the viewport edge that body{overflow-x:hidden} would clip. Below this
+   the menu is a stacked list and the options just flow inside it. */
+@media all and (min-width: 1024px) {
+    #header nav .lang-options {
+        position: absolute;
+        top: 71px;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+/* In the mobile menu the row has to read as one of the stacked links, not as a
+   leftover of the 71px header bar: the same 48px painted box and 15px indent as
+   the anchors beside it, so the globe lines up with their labels. */
+#header nav#nav-mobile .nav-lang summary {
+    height: 48px;
+    line-height: 48px;
+    padding: 0 15px;
+    background: var(--header);
+}
+
+#nav-mobile .nav-lang .lang-options {
+    margin: 0 0 10px;
+}
+
 /*Navigation Solid*/
 
 #header.nav-solid [class*='col-'] {
