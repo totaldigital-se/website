@@ -246,3 +246,71 @@
         display: none;
     }
 }
+
+/* Showcases. Four cards at ~585px each is a 2,600px stack on a phone, so below
+   the tablet breakpoint they ride the same sitewide carousel the products use.
+   The slides are the existing .row wrappers, which keeps the desktop stack
+   exactly as it was. */
+@media (max-width: 767px) {
+
+    /* Side padding is the gutter the next card peeks through — that peek is
+       the only thing telling a reader there is more to swipe to. */
+    .showcase-track.image-carousel-track {
+        gap: 16px;
+        padding: 8px 11% 16px;
+    }
+
+    /* .row hands these 15px of padding and a full width; the track sizes them
+       instead. */
+    .showcase-track > .image-carousel-slide {
+        float: none;
+        width: auto;
+        padding: 0 !important;
+    }
+
+    .showcase-track .feature-card.showcase {
+        height: 100%;
+        margin: 0;
+    }
+
+    /* Same reasoning as the products track: the cards are tall enough that an
+       arrow centred on the track lands in the middle of a paragraph, so the
+       arrows sit on the dot row. */
+    .showcase-carousel .image-carousel-dots {
+        align-items: center;
+        min-height: 36px;
+        margin-top: 8px;
+    }
+
+    .showcase-carousel .image-carousel-arrow {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+        line-height: 36px;
+    }
+
+    .showcase-carousel .image-carousel-arrow--prev {
+        left: 15px;
+    }
+
+    .showcase-carousel .image-carousel-arrow--next {
+        right: 15px;
+    }
+}
+
+/* Desktop keeps the plain stacked rows. */
+@media (min-width: 768px) {
+    .showcase-track.image-carousel-track {
+        display: block;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .showcase-carousel .image-carousel-arrow,
+    .showcase-carousel .image-carousel-dots {
+        display: none;
+    }
+}
