@@ -156,7 +156,6 @@ a,
 
 /* Border Color */
 
-#home .section-heading:before,
 .testimonial.classic footer:before {
     background: var(--primary);
     /*#d2b356;*/

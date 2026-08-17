@@ -1067,13 +1067,9 @@ h1.section-title {
     padding-top: 5%;
 }
 
-#home .section-heading:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 5px;
-    margin-top: 30px;
-}
+/* The orange dash that used to sit above the banner headline is gone: it cost
+   35px above the fold and the headline reads better hard against the nav. The
+   rule under the intro paragraph (.banner-intro:after) is unaffected. */
 
 
 
@@ -2583,6 +2579,20 @@ blockquote {
         padding-top: 40px !important;
     }
 
+    /* Replaces the breathing room the removed :before dash used to provide.
+       Needs #home to outspecify "#home h1 { padding-top: 5% }", whose
+       percentage resolves against the container width, not its height. */
+    #home #main-heading {
+        padding-top: 40px;
+    }
+
+    /* The intro's own orange rule already separates the paragraph from the
+       button, so the button's default 35px top margin just pushes it towards
+       the fold. Scoped to the banner so the product buttons keep theirs. */
+    #banner-content .button {
+        margin: 12px 0 0;
+    }
+
     /*-----------------Sections-----------------*/
 
     /* Call to Action*/
@@ -2708,6 +2718,20 @@ blockquote {
        both fit in the first viewport on a phone. */
     #banner-content.row {
         padding-top: 40px !important;
+    }
+
+    /* Replaces the breathing room the removed :before dash used to provide.
+       Needs #home to outspecify "#home h1 { padding-top: 5% }", whose
+       percentage resolves against the container width, not its height. */
+    #home #main-heading {
+        padding-top: 40px;
+    }
+
+    /* The intro's own orange rule already separates the paragraph from the
+       button, so the button's default 35px top margin just pushes it towards
+       the fold. Scoped to the banner so the product buttons keep theirs. */
+    #banner-content .button {
+        margin: 12px 0 0;
     }
 
     /*Navigation*/
