@@ -828,6 +828,104 @@ h2 {
     line-height: normal;
 }
 
+/* Hero expertise line: "Experter på:" with the business areas cycling
+   vertically beside it.
+
+   Sized in vw rather than px so the label and the longest area name stay on one
+   line at every phone width. "Experter på: Fleet Management" measures ~16.2×
+   the font size, so at 390px and 5.1vw the pair is ~322px against 358px of
+   usable width, and at 320px it is ~264px against 288px. */
+.expertise-line {
+    /* The reset zeroes margin on h1-h6 but not on p. */
+    margin: 0;
+    padding: 20px 0 4px;
+    display: flex;
+    /* not baseline: overflow:hidden on the window gives it a bottom-edge
+       baseline, which would drop the area name below the label */
+    align-items: flex-start;
+    gap: 0.3em;
+    /* 4.7vw keeps label + icon + the longest name ("Fleet Management") on one
+       line: ~330px of 358px usable at 390px, ~270px of 288px at 320px. */
+    font-size: clamp(15px, 4.7vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+/* --expertise-step is the height of one reel item. The window shows exactly one,
+   and the keyframes below step the reel by this much. */
+.expertise-rotator {
+    --expertise-step: 1.5em;
+    display: block;
+    height: var(--expertise-step);
+    overflow: hidden;
+}
+
+.expertise-reel {
+    display: block;
+    /* 15s across 6 areas: 2.5s each, of which 0.5s is the slide */
+    animation: expertise-cycle 15s infinite;
+}
+
+.expertise-reel > span {
+    display: flex;
+    align-items: center;
+    gap: 0.35em;
+    height: var(--expertise-step);
+}
+
+.expertise-reel img {
+    height: 1.4em;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+/* Stepped in em, NOT in percent: a percentage translateY resolves against the
+   reel's own height — all seven items — so -100% would move it seven rows, not
+   one. The 7th item repeats the 1st, so the wrap back to 0 is invisible. */
+@keyframes expertise-cycle {
+
+    0%,
+    13.33% {
+        transform: translateY(0);
+    }
+
+    16.67%,
+    30% {
+        transform: translateY(calc(-1 * var(--expertise-step)));
+    }
+
+    33.33%,
+    46.67% {
+        transform: translateY(calc(-2 * var(--expertise-step)));
+    }
+
+    50%,
+    63.33% {
+        transform: translateY(calc(-3 * var(--expertise-step)));
+    }
+
+    66.67%,
+    80% {
+        transform: translateY(calc(-4 * var(--expertise-step)));
+    }
+
+    83.33%,
+    96.67% {
+        transform: translateY(calc(-5 * var(--expertise-step)));
+    }
+
+    100% {
+        transform: translateY(calc(-6 * var(--expertise-step)));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .expertise-reel {
+        animation: none;
+    }
+}
+
 h3 {
     padding: 10px 0;
 }

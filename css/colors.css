@@ -327,6 +327,16 @@ body {
     /* color: var(--header-text) */
 }
 
+/* Hero expertise line. The label is held back so the area name sliding beside
+   it is what the eye lands on. */
+#home .expertise-line {
+    color: var(--banner-text);
+}
+
+#home .expertise-label {
+    opacity: 0.7;
+}
+
 /* Banner intro. Body copy rather than a heading, but it keeps the look the
    banner h2 had, orange rule included. */
 #home .banner-intro {
