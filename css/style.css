@@ -840,22 +840,26 @@ h2 {
     margin: 0;
     padding: 20px 0 4px;
     display: flex;
-    /* not baseline: overflow:hidden on the window gives it a bottom-edge
-       baseline, which would drop the area name below the label */
-    align-items: flex-start;
+    /* centred, not baseline: the window is taller than its text because of the
+       icon, and overflow:hidden gives it a bottom-edge baseline that would drop
+       the area name well below the label */
+    align-items: center;
     gap: 0.3em;
-    /* 4.7vw keeps label + icon + the longest name ("Fleet Management") on one
-       line: ~330px of 358px usable at 390px, ~270px of 288px at 320px. */
-    font-size: clamp(15px, 4.7vw, 36px);
+    /* 4.4vw leaves room for a bigger icon and still keeps label + icon + the
+       longest name ("Fleet Management") on one line: ~325px of 358px usable at
+       390px, ~266px of 288px at 320px. */
+    font-size: clamp(14px, 4.4vw, 34px);
     font-weight: 800;
     line-height: 1.25;
     white-space: nowrap;
 }
 
-/* --expertise-step is the height of one reel item. The window shows exactly one,
-   and the keyframes below step the reel by this much. */
+/* --expertise-step is the height of one reel item, sized off the icon since the
+   icon is taller than the text. The window shows exactly one item, and the
+   keyframes below step the reel by this much. */
 .expertise-rotator {
-    --expertise-step: 1.5em;
+    --expertise-icon: 1.5em;
+    --expertise-step: calc(var(--expertise-icon) + 0.3em);
     display: block;
     height: var(--expertise-step);
     overflow: hidden;
@@ -870,14 +874,23 @@ h2 {
 .expertise-reel > span {
     display: flex;
     align-items: center;
-    gap: 0.35em;
+    gap: 0.3em;
     height: var(--expertise-step);
 }
 
 .expertise-reel img {
-    height: 1.4em;
+    height: var(--expertise-icon);
     width: auto;
     flex: 0 0 auto;
+}
+
+/* On a phone the icon needs to be relatively larger to read at all: 1.5em is
+   ~51px against 34px text on desktop, which is balanced, but only ~26px on a
+   390px screen. 2.4em puts it at ~41px there. */
+@media (max-width: 767px) {
+    .expertise-rotator {
+        --expertise-icon: 2.4em;
+    }
 }
 
 /* Stepped in em, NOT in percent: a percentage translateY resolves against the
@@ -2564,8 +2577,10 @@ blockquote {
         margin-top: 0;
     }
 
+    /* Pulls the headline up towards the nav so the expertise line and the CTA
+       both fit in the first viewport on a phone. */
     #banner-content.row {
-        padding-top: 85px !important;
+        padding-top: 40px !important;
     }
 
     /*-----------------Sections-----------------*/
@@ -2689,8 +2704,10 @@ blockquote {
         padding-top: 6px;
     }
 
+    /* Pulls the headline up towards the nav so the expertise line and the CTA
+       both fit in the first viewport on a phone. */
     #banner-content.row {
-        padding-top: 85px !important;
+        padding-top: 40px !important;
     }
 
     /*Navigation*/
