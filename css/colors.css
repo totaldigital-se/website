@@ -166,9 +166,9 @@ a,
         1px 1px var(--primary), -1px -1px var(--primary), 1px -1px var(--primary), -1px 1px var(--primary);
 }
 
-#product-heading.section-title {
-    color: var(--normal-text);
-}
+/* Produkter used to sit on a lighter band and needed a white title to stay
+   legible on it. The band is gone, so the section title matches every other
+   one. */
 
 .backgroundimage-overlay {
     position: absolute;
