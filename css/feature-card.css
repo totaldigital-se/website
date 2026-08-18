@@ -3,6 +3,7 @@
     display: flex;
     /* width: 500px; */
     /* height: 180px; */
+    /* Same as the page, so the border is what makes it read as a card. */
     background-color: #333;
     border-radius: 10px;
     /* Rounded corners */
@@ -14,14 +15,14 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    border: 1px solid #555;
+    border: 2px solid #555;
 }
 
 /* Updated hover state for a perfectly uniform, rounded shadow glow */
 .feature-card:hover {
-    /* 
+    /*
        The 4 values mean: X-offset (0), Y-offset (15px), Blur (30px), and Spread (-3px).
-       The negative spread pulls the shadow inward slightly, forcing it to round out 
+       The negative spread pulls the shadow inward slightly, forcing it to round out
        perfectly even on the sides with dark images.
     */
     /* box-shadow: 0 15px 30px -3px rgba(68, 68, 68, 0.6); */

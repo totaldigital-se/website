@@ -24,7 +24,7 @@
 
 #9c9c9cff
 
-/* CSS HEX 
+/* CSS HEX
 --charcoal: #3e4c5eff;
 --asparagus: #678D58ff;
 --air-superiority-blue: #6d9dc5ff;
@@ -300,14 +300,14 @@ body {
 
 #logo h1 {
     font-family:;
-    font-size:; 
+    font-size:;
     font-weight:;
     color:;
 }
 
 #logo h2 {
     font-family:;
-    font-size:; 
+    font-size:;
     font-weight:;
     color:;
 }
@@ -528,6 +528,12 @@ input[type="submit"]:hover {
 /*------------------------------------------------------------------------------------------*/
 /* 7. Footer */
 /*------------------------------------------------------------------------------------------*/
+
+/* A rule off the last section, so the footer closes the page instead of running
+   into it. */
+#landing-footer {
+    border-top: 1px solid #555;
+}
 
 #landing-footer,
 #landing-footer p,

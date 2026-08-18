@@ -29,6 +29,8 @@
 
     /* Transparent background color using rgba (Red, Green, Blue, Opacity) */
     /* 0, 0, 0 is black. 0.5 means 50% transparent */
+    /* The service cards keep white type over the photo, so the veil stays dark
+       — a light veil would leave the text at ~1.6:1. */
     background-color: rgba(51, 51, 51, 0.6);
 
     /* 3. The magic centering code */
