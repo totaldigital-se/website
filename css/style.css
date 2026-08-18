@@ -993,6 +993,16 @@ h6 {
     padding: 0 0 15px 0;
 }
 
+/* Affärsområden and Tillit sit their heading inside a col-, so the title starts
+   at the 20px gutter and lines up with the cards below it. The headings that sit
+   straight in the row have no column to get that from, so they take the gutter
+   here instead. Under 481px the columns drop their gutter, and so does this —
+   see the col- padding reset in the (max-width: 480px) block. */
+.row > .section-heading {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /* h1 section titles keep the tighter h2 padding, and sit closer to the body text
    since they have no subtitle line under them */
 h1.section-title {
@@ -2544,7 +2554,11 @@ blockquote {
     .col-3-4,
     .col-9-10,
     .col-61,
-    .col-38 {
+    .col-38,
+    /* Stays in this list: the headings that sit straight in a row borrow the
+       col- gutter to line up with the cards, so they have to lose it wherever
+       the columns do. */
+    .row > .section-heading {
         padding-right: 0;
         padding-left: 0;
     }
