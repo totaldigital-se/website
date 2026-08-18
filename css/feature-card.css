@@ -262,8 +262,19 @@
     }
 
     /* .row hands these 15px of padding and a full width; the track sizes them
-       instead. */
+       instead.
+
+       display: flex is what equalises the card heights. The track already
+       stretches every slide to the tallest, but the card inside is a float, and
+       its height: 100% below would not resolve against the slide's stretched
+       height — cards came out 577px or 651.5px depending on how much copy they
+       carry, and the gutter peek of the next card made the difference obvious.
+       As a flex parent the slide stretches the card itself, so the copy no
+       longer sets the height. It has to stay row direction: in a column the
+       stretch would apply to the width instead and the heights would drift
+       apart again. */
     .showcase-track > .image-carousel-slide {
+        display: flex;
         float: none;
         width: auto;
         padding: 0 !important;
