@@ -2832,6 +2832,30 @@ blockquote {
         line-height: 1.45;
     }
 
+    /* Affärsområden and Tillit put the section subtitle in its own column so it
+       can stand beside the heading from 768px up. Stacked, everything that was
+       meant to separate the two columns lands between the title and the
+       subtitle instead: the heading column's 20px bottom padding, the subtitle
+       column's 20px top padding and the heading's own 15px. That put the
+       subtitle 87px below the orange rule. Collapsing the three puts it at 32px,
+       which is what td_asset_care measures — the page with the same h2 heading
+       block, but with the subtitle nested inside .section-heading. (The other
+       two subtitle pages sit elsewhere for their own reasons: about.html at
+       18px because its title is an h1, td_test.html at 57px. Neither is touched
+       by the rules below.)
+
+       Matched on the relationship rather than on .section-heading, so the pages
+       that nest the subtitle inside the heading are left alone: there the
+       subtitle is a grandchild of the column, not a direct child. */
+    .row > [class*='col-']:has(+ [class*='col-'] > .section-subtitle),
+    .row > [class*='col-']:has(+ [class*='col-'] > .section-subtitle) > .section-heading {
+        padding-bottom: 0;
+    }
+
+    .row > [class*='col-']:has(> .section-subtitle) {
+        padding-top: 0;
+    }
+
 }
 
 /* Landscape Tablet to Desktop
