@@ -6,8 +6,12 @@
     /* Set to your desired height */
     border: 1px solid #555;
     border-radius: 12px;
-    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
-    /* Keeps your design consistent */
+    /* This used to be 0 15px 30px -9px rgba(0, 0, 0, 0.6), which is exactly the
+       *hover* shadow of .feature-card — so the service cards sat permanently
+       lifted next to the resting product and showcase cards. Same resting
+       shadow as .feature-card now. They have no hover state of their own, so
+       this is the only shadow they wear. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     position: relative;
     /* Crucial for anchoring the overlay */
@@ -128,19 +132,8 @@ img.showcase-image {
     object-fit: cover;
     border: 1px solid #555;
     border-radius: 12px;
-    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
-}
-
-/* Showcase hero image, same framing as .service-card but without the text overlay */
-/* img.* to win over .row img { height: auto } in style.css */
-img.showcase-image {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border: 1px solid #555;
-    border-radius: 12px;
-    box-shadow: 0 15px 30px -9px rgba(0, 0, 0, 0.6);
+    /* Kept in step with .service-card above — the framing is meant to match. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .td-test {
