@@ -359,6 +359,22 @@ section {
     background: var(--header);
 }
 
+/* Keeps a jumped-to section's heading clear of the fixed header.
+
+   stickyNavbar animates to `offsetTop - headerHeight + 2`, which is right, and
+   then calls .focus() on the section from the animation's complete callback.
+   That focus is a scroll-into-view: Blink (Chrome, Brave) realigns the section's
+   top flush to the viewport top and throws the header compensation away, so the
+   kicker and half the title end up behind the header. Gecko reads the section as
+   already visible and doesn't re-scroll, which is why Firefox looked fine.
+
+   scroll-margin-top is honoured by scroll-into-view, so it puts the focus scroll
+   back where the animation aimed. 71px is the header height above; the animation
+   rests 2px below that, so the correction is invisible. */
+.scrollto {
+    scroll-margin-top: 71px;
+}
+
 #header .row {
     padding: 0;
 }
