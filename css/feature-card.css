@@ -135,6 +135,18 @@
     min-height: 200px;
 }
 
+/* .card-title carries 400 from colors.css, which reads thin against the card
+   copy. 700 matches .section-title.
+
+   Scoped to .showcase rather than set on .card-title, because that class is
+   shared three ways and the showcase cards were the only ones still on 400: the
+   Affärsområden icon blocks get bold from .icon-block .card-title in style.css
+   and the service cards from .overlay .card-title in service-card.css. Widening
+   this selector would just duplicate what those two already do. */
+.showcase .card-title {
+    font-weight: 700;
+}
+
 /* On a phone the 30% image column is a ~110px strip that crops the photo to
    nothing and squeezes the copy into a ribbon. Stack instead: full-width image
    on top, text underneath. */
@@ -168,10 +180,11 @@
 }
 
 /* Product name. It is an h3 so the page keeps a single h1, but it is sized
-   like the h1 it replaced. */
+   like the h1 it replaced. 700 rather than the 300 it carried: at 40px the
+   light weight read as thin, and 700 is what .section-title uses. */
 .product h3 {
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 700;
     padding: 20px 0;
 }
 
@@ -203,6 +216,15 @@
         margin: 0;
         min-height: 0;
         height: 100%;
+    }
+
+    /* 40px survived here while the title was 300, but bold is wider: at 390px
+       the slide gives the title 257px and "TD Asset Care" measures 250px at 300
+       against 273px at 700, so it started wrapping to two lines. 34px brings it
+       to 232px, which fits, and is the size .section-title already uses.
+       Desktop keeps 40px — the 350px card has room for the bold one-liner. */
+    .product h3 {
+        font-size: 34px;
     }
 
     /* The cards are ~750px tall, so an arrow centred on the track would land
